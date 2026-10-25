@@ -1,0 +1,29 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.fco.airsidequiz'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'com.fco.airsidequiz'
+        minSdk 26
+        targetSdk 35
+        versionCode 3
+        versionName '3.0'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    packaging {
+        resources.excludes += ['/META-INF/AL2.0', '/META-INF/LGPL2.1']
+    }
+}
+
+dependencies {
+    implementation 'com.google.mlkit:translate:17.0.3'
+}

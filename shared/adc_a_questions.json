@@ -1,0 +1,1232 @@
+{
+  "title": "FCO Airside Quiz – Banca unica",
+  "version": "2026-09-26",
+  "sourceTests": [
+    "Patente Aeroportuale FCO 1",
+    "Patente Aeroportuale FCO 2"
+  ],
+  "count": 111,
+  "questions": [
+    {
+      "question": "La società Aeroporti di Roma (ADR) è:",
+      "options": [
+        "Un operatore aeroportuale e società incaricata di gestire e amministrare le infrastrutture aeroportuali.",
+        "Un’autorità aeroportuale.",
+        "Un ente di assistenza al volo."
+      ],
+      "correct": 0,
+      "category": "Organizzazione",
+      "manualPage": 5
+    },
+    {
+      "question": "Chi definisce, in accordo con il Reg. UE 139/2014, le regole per la guida in airside e per l’emissione delle ADC?",
+      "options": [
+        "ENAV",
+        "Il gestore aeroportuale ADR.",
+        "La Polizia di Stato."
+      ],
+      "correct": 1,
+      "category": "Organizzazione",
+      "manualPage": 9
+    },
+    {
+      "question": "La circolazione in Airside è disciplinata da:",
+      "options": [
+        "Regolamento (UE) 139/2014, Manuale di Aeroporto e Codice della Strada.",
+        "Solo dal Codice della Strada.",
+        "Solo dal Manuale di Aeroporto."
+      ],
+      "correct": 0,
+      "category": "Normativa",
+      "manualPage": 6
+    },
+    {
+      "question": "Per Airside si intende:",
+      "options": [
+        "La parte pubblica dell’aerostazione.",
+        "L’area aeroportuale interna ai varchi doganali e/o alle postazioni di controllo di sicurezza.",
+        "Solo l’area cargo."
+      ],
+      "correct": 1,
+      "category": "Definizioni",
+      "manualPage": 9
+    },
+    {
+      "question": "Che cosa comprende l’Area di Movimento?",
+      "options": [
+        "Solo i piazzali.",
+        "Area di Manovra e piazzali.",
+        "Solo piste e taxiway."
+      ],
+      "correct": 1,
+      "category": "Definizioni",
+      "manualPage": 9
+    },
+    {
+      "question": "Che cosa comprende l’Area di Manovra?",
+      "options": [
+        "Piste e vie di rullaggio, con esclusione dei piazzali.",
+        "Piste e piazzali.",
+        "Solo i piazzali."
+      ],
+      "correct": 0,
+      "category": "Definizioni",
+      "manualPage": 9
+    },
+    {
+      "question": "Che cos’è un Apron?",
+      "options": [
+        "L’area destinata alla sosta, imbarco/sbarco, carico/scarico, rifornimento e manutenzione degli aeromobili.",
+        "Solo la pista di volo.",
+        "Solo l’area cargo."
+      ],
+      "correct": 0,
+      "category": "Definizioni",
+      "manualPage": 10
+    },
+    {
+      "question": "Che cos’è una piazzola aeromobile (aircraft stand)?",
+      "options": [
+        "Una specifica area del piazzale destinata al parcheggio di un aeromobile.",
+        "L’intero piazzale.",
+        "Una via di rullaggio."
+      ],
+      "correct": 0,
+      "category": "Definizioni",
+      "manualPage": 10
+    },
+    {
+      "question": "Che cos’è una pista (runway)?",
+      "options": [
+        "Un percorso per i veicoli.",
+        "Un’area rettangolare predisposta per l’atterraggio e il decollo degli aeromobili.",
+        "Un’area di sosta."
+      ],
+      "correct": 1,
+      "category": "Definizioni",
+      "manualPage": 10
+    },
+    {
+      "question": "Che cos’è una taxiway?",
+      "options": [
+        "Un percorso definito destinato al rullaggio degli aeromobili.",
+        "Una strada perimetrale.",
+        "Una zona di manutenzione."
+      ],
+      "correct": 0,
+      "category": "Definizioni",
+      "manualPage": 10
+    },
+    {
+      "question": "Che cosa significa F.O.D.?",
+      "options": [
+        "Foreign Object Damage or Debris: oggetto o sostanza che può causare danni a un aeromobile.",
+        "Area di sicurezza aeromobile.",
+        "Sistema di smistamento bagagli."
+      ],
+      "correct": 0,
+      "category": "Safety",
+      "manualPage": 9
+    },
+    {
+      "question": "Che cos’è l’ERA?",
+      "options": [
+        "Equipment Restriction Area: area di accesso limitato per i mezzi di rampa.",
+        "Un’area riservata ai passeggeri.",
+        "Un’area di manutenzione."
+      ],
+      "correct": 0,
+      "category": "Definizioni",
+      "manualPage": 9
+    },
+    {
+      "question": "Che cos’è l’ESA?",
+      "options": [
+        "Equipment Service Area: area di attesa per il servizio dei mezzi di rampa.",
+        "Un’area di sicurezza dell’aeromobile.",
+        "Una pista."
+      ],
+      "correct": 0,
+      "category": "Definizioni",
+      "manualPage": 9
+    },
+    {
+      "question": "Che cos’è l’ADC-A?",
+      "options": [
+        "Abilitazione alla guida sui piazzali, viabilità veicolare in Airside e strada perimetrale nei casi consentiti.",
+        "Abilitazione esclusivamente alla pista.",
+        "Abilitazione esclusivamente all’area di manovra."
+      ],
+      "correct": 0,
+      "category": "ADC",
+      "manualPage": 5
+    },
+    {
+      "question": "L’ADC-M abilita anche alla guida in:",
+      "options": [
+        "Area di Manovra.",
+        "Solo piazzali.",
+        "Solo strada perimetrale."
+      ],
+      "correct": 0,
+      "category": "ADC",
+      "manualPage": 6
+    },
+    {
+      "question": "Per conseguire l’ADC-A è necessario possedere:",
+      "options": [
+        "Una patente civile idonea e il TIA che autorizzi l’accesso in Airside, oltre alla formazione prevista.",
+        "Solo il TIA.",
+        "Solo la patente civile."
+      ],
+      "correct": 0,
+      "category": "ADC",
+      "manualPage": 16
+    },
+    {
+      "question": "Per veicoli non riconducibili alle tipologie del Codice della Strada, come trattori e loader, è richiesta almeno:",
+      "options": [
+        "Patente B.",
+        "Patente A.",
+        "Nessuna patente."
+      ],
+      "correct": 0,
+      "category": "ADC",
+      "manualPage": 16
+    },
+    {
+      "question": "La formazione teorica iniziale ha validità di:",
+      "options": [
+        "Tre mesi dal rilascio dell’Attestato.",
+        "24 mesi.",
+        "Quattro anni."
+      ],
+      "correct": 0,
+      "category": "Formazione",
+      "manualPage": 17
+    },
+    {
+      "question": "L’addestramento pratico iniziale minimo è:",
+      "options": [
+        "4 ore a Fiumicino e 2 ore a Ciampino, seguito da assessment.",
+        "2 ore a Fiumicino e 4 ore a Ciampino.",
+        "4 ore sempre, senza assessment."
+      ],
+      "correct": 0,
+      "category": "Formazione",
+      "manualPage": 17
+    },
+    {
+      "question": "L’esame teorico per l’ADC-A consiste in:",
+      "options": [
+        "20 quesiti a risposta multipla; superamento con almeno 18 risposte corrette in 25 minuti.",
+        "30 quesiti in 60 minuti; servono 15 corrette.",
+        "10 quesiti in 10 minuti; servono 10 corrette."
+      ],
+      "correct": 0,
+      "category": "Formazione",
+      "manualPage": 17
+    },
+    {
+      "question": "L’ADC-A ha validità di:",
+      "options": [
+        "4 anni, subordinata anche alla validità della patente.",
+        "3 anni.",
+        "5 anni."
+      ],
+      "correct": 0,
+      "category": "ADC",
+      "manualPage": 18
+    },
+    {
+      "question": "Il recurrent training ADC-A deve essere effettuato:",
+      "options": [
+        "Ogni 24 mesi dalla data di emissione dell’Attestato Teorico ADC-A, in e-learning.",
+        "Ogni 12 mesi.",
+        "Ogni 48 mesi."
+      ],
+      "correct": 0,
+      "category": "Formazione",
+      "manualPage": 19
+    },
+    {
+      "question": "In caso di mancato superamento del test del recurrent training, il candidato può ripetere la prova:",
+      "options": [
+        "Dopo 3 giorni ed entro 14 giorni dal primo tentativo.",
+        "Dopo 30 giorni.",
+        "Solo dopo un anno."
+      ],
+      "correct": 0,
+      "category": "Formazione",
+      "manualPage": 19
+    },
+    {
+      "question": "Se la guida in Apron è interrotta per un periodo continuativo tra 3 e 12 mesi, è previsto:",
+      "options": [
+        "Refresher training pratico: 2 ore a Fiumicino e 1 ora a Ciampino.",
+        "Nessun adempimento.",
+        "Nuovo esame immediato senza formazione."
+      ],
+      "correct": 0,
+      "category": "Formazione",
+      "manualPage": 18
+    },
+    {
+      "question": "Se l’interruzione della guida in Apron supera 12 mesi:",
+      "options": [
+        "Decade la validità dell’ADC-A e va ripetuto l’iter normale per una nuova abilitazione, incluso l’esame.",
+        "Basta un’autodichiarazione.",
+        "Basta un recurrent online."
+      ],
+      "correct": 0,
+      "category": "Formazione",
+      "manualPage": 19
+    },
+    {
+      "question": "Con un’ADC/A già emessa su uno dei due aeroporti, per ottenerla sull’altro scalo occorre:",
+      "options": [
+        "Effettuare l’addestramento pratico previsto nello scalo di richiesta e presentare la documentazione.",
+        "Ripetere sempre l’esame teorico completo.",
+        "Solo richiedere un nuovo TIA."
+      ],
+      "correct": 0,
+      "category": "ADC",
+      "manualPage": 20
+    },
+    {
+      "question": "Prima di iniziare a operare, chi deve verificare l’efficienza del mezzo?",
+      "options": [
+        "Il conducente del mezzo.",
+        "Il responsabile dell’officina.",
+        "Solo il datore di lavoro."
+      ],
+      "correct": 0,
+      "category": "Veicoli",
+      "manualPage": 32
+    },
+    {
+      "question": "Tra i controlli pre-guida rientrano:",
+      "options": [
+        "Freni, ruote/pneumatici, luci, vetri, specchietti, carburante, perdite e dispositivi di bloccaggio carichi.",
+        "Solo cambio e frizione.",
+        "Solo sportelli e volante."
+      ],
+      "correct": 0,
+      "category": "Veicoli",
+      "manualPage": 32
+    },
+    {
+      "question": "In caso di perdita di idrocarburi, anche di piccola entità, il conducente deve:",
+      "options": [
+        "Segnalarla immediatamente al CEA ADR.",
+        "Ignorarla se è minima.",
+        "Spostare il mezzo e basta."
+      ],
+      "correct": 0,
+      "category": "Safety",
+      "manualPage": 32
+    },
+    {
+      "question": "In caso di collisione tra veicoli deve essere sempre generato:",
+      "options": [
+        "Un Ground Safety Report (GSR).",
+        "Solo un rapporto interno aziendale.",
+        "Nessuna segnalazione se non ci sono feriti."
+      ],
+      "correct": 0,
+      "category": "Safety",
+      "manualPage": 33
+    },
+    {
+      "question": "Per i veicoli individuati dalle disposizioni, la radio Torre UHF è:",
+      "options": [
+        "445.775 MHz a Fiumicino e 418.4 MHz a Ciampino.",
+        "118.000 MHz in entrambi gli scali.",
+        "Solo una radio GROUND."
+      ],
+      "correct": 0,
+      "category": "Dotazioni",
+      "manualPage": 27
+    },
+    {
+      "question": "A Fiumicino i veicoli individuati devono avere la Cartina Piazzali:",
+      "options": [
+        "Disponibile a bordo in formato cartaceo o prontamente consultabile in digitale.",
+        "Solo presso la torre.",
+        "Non è prevista."
+      ],
+      "correct": 0,
+      "category": "Dotazioni",
+      "manualPage": 27
+    },
+    {
+      "question": "Il limite sulla viabilità veicolare in Airside è:",
+      "options": [
+        "30 km/h o inferiore ove previsto.",
+        "50 km/h.",
+        "40 km/h."
+      ],
+      "correct": 0,
+      "category": "Circolazione",
+      "manualPage": 34
+    },
+    {
+      "question": "Il limite sulla strada perimetrale è:",
+      "options": [
+        "30 km/h.",
+        "50 km/h.",
+        "10 km/h."
+      ],
+      "correct": 0,
+      "category": "Circolazione",
+      "manualPage": 34
+    },
+    {
+      "question": "All’interno delle aree di smistamento bagagli il limite è:",
+      "options": [
+        "5 km/h.",
+        "10 km/h.",
+        "30 km/h."
+      ],
+      "correct": 0,
+      "category": "Circolazione",
+      "manualPage": 34
+    },
+    {
+      "question": "All’interno delle aree di stoccaggio ULD il limite è:",
+      "options": [
+        "5 km/h.",
+        "20 km/h.",
+        "30 km/h."
+      ],
+      "correct": 0,
+      "category": "Circolazione",
+      "manualPage": 34
+    },
+    {
+      "question": "In prossimità dei cantieri in Airside il limite è:",
+      "options": [
+        "10 km/h.",
+        "20 km/h.",
+        "30 km/h."
+      ],
+      "correct": 0,
+      "category": "Circolazione",
+      "manualPage": 34
+    },
+    {
+      "question": "All’interno dell’ERA/ASA la velocità deve essere:",
+      "options": [
+        "A passo d’uomo.",
+        "10 km/h.",
+        "30 km/h."
+      ],
+      "correct": 0,
+      "category": "Circolazione",
+      "manualPage": 34
+    },
+    {
+      "question": "Durante la guida in Airside le distanze di sicurezza tra veicoli devono essere rispettate:",
+      "options": [
+        "Sempre.",
+        "Solo di notte.",
+        "Solo in caso di nebbia."
+      ],
+      "correct": 0,
+      "category": "Circolazione",
+      "manualPage": 36
+    },
+    {
+      "question": "Per uscire dalla viabilità veicolare occorre:",
+      "options": [
+        "Compiere una svolta ad angolo retto.",
+        "Svoltare a 30 gradi.",
+        "Fare un’inversione a U."
+      ],
+      "correct": 0,
+      "category": "Circolazione",
+      "manualPage": 36
+    },
+    {
+      "question": "Nelle aree aeroportuali interne la sosta dei veicoli è consentita:",
+      "options": [
+        "Solo negli spazi/stalli riservati a tale scopo.",
+        "Sulle taxiway.",
+        "Ovunque per meno di 10 minuti."
+      ],
+      "correct": 0,
+      "category": "Sosta",
+      "manualPage": 37
+    },
+    {
+      "question": "Lungo la viabilità veicolare è consentita la sosta:",
+      "options": [
+        "No, salvo le eccezioni previste per specifiche operazioni/mezzi.",
+        "Sempre.",
+        "Solo di notte."
+      ],
+      "correct": 0,
+      "category": "Sosta",
+      "manualPage": 37
+    },
+    {
+      "question": "Un mezzo non può essere lasciato incustodito per più di:",
+      "options": [
+        "10 minuti, salvo necessità di operazioni sottobordo.",
+        "30 minuti.",
+        "60 minuti."
+      ],
+      "correct": 0,
+      "category": "Sosta",
+      "manualPage": 37
+    },
+    {
+      "question": "La precedenza agli aeromobili vale:",
+      "options": [
+        "Sempre, anche se trainati.",
+        "Solo se in rullaggio.",
+        "Solo se non trainati."
+      ],
+      "correct": 0,
+      "category": "Precedenze",
+      "manualPage": 49
+    },
+    {
+      "question": "Un aeromobile con luci anticollisione accese è da considerare:",
+      "options": [
+        "In manovra, anche se fermo sulla piazzola.",
+        "Sempre fermo.",
+        "In sosta definitiva."
+      ],
+      "correct": 0,
+      "category": "Precedenze",
+      "manualPage": 34
+    },
+    {
+      "question": "I mezzi di emergenza possono derogare a limiti di velocità e segnaletica, ma:",
+      "options": [
+        "Non possono derogare all’obbligo di dare precedenza agli aeromobili.",
+        "Possono sempre ignorare la precedenza agli aeromobili.",
+        "Devono sempre fermarsi."
+      ],
+      "correct": 0,
+      "category": "Precedenze",
+      "manualPage": 34
+    },
+    {
+      "question": "Tra le priorità indicate dal manuale, i mezzi di rifornimento aeromobili hanno priorità:",
+      "options": [
+        "Prima degli autobus/ambulift con passeggeri e delle attrezzature bagagli/posta/merci, quando manca la segnaletica del Codice della Strada.",
+        "Dopo tutte le attrezzature.",
+        "Non hanno alcuna priorità."
+      ],
+      "correct": 0,
+      "category": "Precedenze",
+      "manualPage": 34
+    },
+    {
+      "question": "Uscendo da una piazzola e immettendosi sulla viabilità veicolare, il conducente deve:",
+      "options": [
+        "Dare precedenza ai veicoli che circolano sulla viabilità.",
+        "Dare sempre precedenza al proprio mezzo.",
+        "Entrare senza fermarsi."
+      ],
+      "correct": 0,
+      "category": "Precedenze",
+      "manualPage": 34
+    },
+    {
+      "question": "È consentito utilizzare il cellulare alla guida in Airside:",
+      "options": [
+        "Esclusivamente via Bluetooth o auricolare.",
+        "Solo se autorizzati dal responsabile.",
+        "Solo in emergenza."
+      ],
+      "correct": 0,
+      "category": "Obblighi",
+      "manualPage": 36
+    },
+    {
+      "question": "In Airside è vietato fumare:",
+      "options": [
+        "In tutta l’area di movimento, salvo le aree appositamente individuate e segnalate.",
+        "Solo a piedi.",
+        "Solo nelle taxiway."
+      ],
+      "correct": 0,
+      "category": "Divieti",
+      "manualPage": 36
+    },
+    {
+      "question": "I veicoli nelle aree di movimento devono tenere le luci accese:",
+      "options": [
+        "Di notte e di giorno in condizioni di scarsa visibilità.",
+        "Solo di notte.",
+        "Solo con pioggia."
+      ],
+      "correct": 0,
+      "category": "Obblighi",
+      "manualPage": 36
+    },
+    {
+      "question": "La guida con abbaglianti accesi è:",
+      "options": [
+        "Vietata, salvo le specifiche operazioni previste dal manuale e senza abbagliare altri veicoli.",
+        "Sempre obbligatoria.",
+        "Sempre consentita di notte."
+      ],
+      "correct": 0,
+      "category": "Divieti",
+      "manualPage": 36
+    },
+    {
+      "question": "Le cinture di sicurezza sui mezzi che ne sono dotati sono:",
+      "options": [
+        "Obbligatorie sempre.",
+        "Facoltative a passo d’uomo.",
+        "Obbligatorie solo con nebbia."
+      ],
+      "correct": 0,
+      "category": "Obblighi",
+      "manualPage": 36
+    },
+    {
+      "question": "Il giubbino ad alta visibilità:",
+      "options": [
+        "Fa parte dei DPI da utilizzare secondo le prescrizioni.",
+        "È sempre facoltativo.",
+        "È vietato nelle piazzole."
+      ],
+      "correct": 0,
+      "category": "Obblighi",
+      "manualPage": 36
+    },
+    {
+      "question": "I rifiuti di bordo possono essere lasciati nella piazzola?",
+      "options": [
+        "No, non possono essere abbandonati in piazzola.",
+        "Sì, temporaneamente.",
+        "Sì, vicino all’estintore."
+      ],
+      "correct": 0,
+      "category": "Safety",
+      "manualPage": 36
+    },
+    {
+      "question": "Il centro delle vie di rullaggio (taxiway) è identificato da:",
+      "options": [
+        "Una linea gialla continua.",
+        "Una linea bianca tratteggiata.",
+        "Una linea rossa."
+      ],
+      "correct": 0,
+      "category": "Segnaletica",
+      "manualPage": 41
+    },
+    {
+      "question": "Il marking di bordo piazzale aeromobili è costituito da:",
+      "options": [
+        "Una doppia linea gialla continua.",
+        "Una linea rossa.",
+        "Una linea bianca tratteggiata."
+      ],
+      "correct": 0,
+      "category": "Segnaletica",
+      "manualPage": 41
+    },
+    {
+      "question": "L’Apron Border Line (ABL) è:",
+      "options": [
+        "Una linea continua rossa che non deve essere oltrepassata.",
+        "Una linea gialla tratteggiata.",
+        "Una linea bianca."
+      ],
+      "correct": 0,
+      "category": "Segnaletica",
+      "manualPage": 51
+    },
+    {
+      "question": "La NPA (No Parking Area) è delimitata dal marking NPL e indica:",
+      "options": [
+        "Un’area totalmente vietata al parcheggio.",
+        "Un’area per il parcheggio temporaneo.",
+        "Un’area riservata ai rifornitori."
+      ],
+      "correct": 0,
+      "category": "Segnaletica",
+      "manualPage": 43
+    },
+    {
+      "question": "La zebratura della NPA è caratterizzata da:",
+      "options": [
+        "Strisce rosse inclinate a 45°.",
+        "Strisce bianche a 90°.",
+        "Strisce gialle."
+      ],
+      "correct": 0,
+      "category": "Segnaletica",
+      "manualPage": 43
+    },
+    {
+      "question": "Lo STOP aeronautico indica:",
+      "options": [
+        "Obbligo di fermarsi, guardare a destra e sinistra, accertarsi dell’assenza di aeromobili e solo allora attraversare.",
+        "Solo una raccomandazione.",
+        "Accesso alla manutenzione."
+      ],
+      "correct": 0,
+      "category": "Segnaletica",
+      "manualPage": 49
+    },
+    {
+      "question": "Il segnale di pericolo JET BLAST indica:",
+      "options": [
+        "Pericolo di essere colpiti dal getto dei motori a reazione.",
+        "Ingresso in area di manovra.",
+        "Area tecnica di manutenzione."
+      ],
+      "correct": 0,
+      "category": "Segnaletica",
+      "manualPage": 49
+    },
+    {
+      "question": "Prima di attraversare una taxiway sull’Apron, occorre:",
+      "options": [
+        "Fermarsi sempre allo stop aeronautico e verificare che la via sia libera.",
+        "Rallentare senza fermarsi.",
+        "Chiedere sempre autorizzazione via radio alla TWR per ogni attraversamento."
+      ],
+      "correct": 0,
+      "category": "Circolazione",
+      "manualPage": 33
+    },
+    {
+      "question": "Dietro un aeromobile che si attraversa su una taxiway bisogna mantenere una separazione:",
+      "options": [
+        "Maggiore di 150 m o del doppio della lunghezza dell’aeromobile, scegliendo il valore maggiore.",
+        "Sempre esattamente 100 m.",
+        "50 m."
+      ],
+      "correct": 0,
+      "category": "Distanze",
+      "manualPage": 55
+    },
+    {
+      "question": "Davanti a un aeromobile, durante l’attraversamento della taxiway, bisogna mantenere una separazione:",
+      "options": [
+        "Maggiore di 100 m.",
+        "50 m.",
+        "150 m esatti."
+      ],
+      "correct": 0,
+      "category": "Distanze",
+      "manualPage": 55
+    },
+    {
+      "question": "All’interno dell’ERA/ASA i veicoli e il personale possono entrare quando l’aeromobile:",
+      "options": [
+        "Si è arrestato, ha spento i motori e le luci anticollisione e sono stati posizionati i tacchi, salvo specifiche procedure alternative.",
+        "È ancora in avvicinamento.",
+        "Ha solo spento le luci anticollisione."
+      ],
+      "correct": 0,
+      "category": "Piazzola",
+      "manualPage": 58
+    },
+    {
+      "question": "L’ESA è:",
+      "options": [
+        "L’area di attesa sicura dei mezzi di rampa presso lo stand.",
+        "La zona vietata al parcheggio.",
+        "La pista di volo."
+      ],
+      "correct": 0,
+      "category": "Piazzola",
+      "manualPage": 58
+    },
+    {
+      "question": "Durante l’assistenza agli aeromobili, i veicoli estranei alle operazioni possono accedere in piazzola?",
+      "options": [
+        "No.",
+        "Sì, senza limitazioni.",
+        "Solo se a passo d’uomo."
+      ],
+      "correct": 0,
+      "category": "Piazzola",
+      "manualPage": 58
+    },
+    {
+      "question": "In retromarcia, quando l’operatore non ha sufficiente visibilità, deve:",
+      "options": [
+        "Servirsi di un uomo di sicurezza, salvo mezzi dotati di telecamera/strumenti per misurare la distanza.",
+        "Procedere comunque.",
+        "Usare gli abbaglianti."
+      ],
+      "correct": 0,
+      "category": "Piazzola",
+      "manualPage": 58
+    },
+    {
+      "question": "Quando un aeromobile ha le luci anticollisione accese, un veicolo deve:",
+      "options": [
+        "Rimanere fuori dal perimetro di sicurezza ERL e non circolare dietro all’aeromobile.",
+        "Passare sotto le ali.",
+        "Avvicinarsi ai motori."
+      ],
+      "correct": 0,
+      "category": "Piazzola",
+      "manualPage": 58
+    },
+    {
+      "question": "Sotto le ali degli aeromobili possono sostare/transitare:",
+      "options": [
+        "Solo i mezzi per il rifornimento, quando la loro presenza è indispensabile per tale operazione.",
+        "Tutti i mezzi di rampa.",
+        "Solo le auto della compagnia."
+      ],
+      "correct": 0,
+      "category": "Piazzola",
+      "manualPage": 58
+    },
+    {
+      "question": "La parte dell’autocisterna contenente l’apparato motore:",
+      "options": [
+        "Non può sostare sotto l’ala dell’aeromobile.",
+        "Deve sempre sostare sotto l’ala.",
+        "Può sostare ovunque."
+      ],
+      "correct": 0,
+      "category": "Rifornimento",
+      "manualPage": 58
+    },
+    {
+      "question": "In caso di danneggiamento dell’aeromobile o collisione veicolo-aeromobile:",
+      "options": [
+        "Va segnalato immediatamente all’operatore aereo e deve essere generato un GSR.",
+        "Si segnala solo a fine turno.",
+        "Non serve il GSR."
+      ],
+      "correct": 0,
+      "category": "Safety",
+      "manualPage": 58
+    },
+    {
+      "question": "Durante il rifornimento carburante, i motori di spinta dell’aeromobile devono essere:",
+      "options": [
+        "Spenti.",
+        "Accesi al minimo.",
+        "Accesi solo uno alla volta."
+      ],
+      "correct": 0,
+      "category": "Rifornimento",
+      "manualPage": 58
+    },
+    {
+      "question": "In caso di perdita di idrocarburi dal mezzo, anche piccola, bisogna:",
+      "options": [
+        "Segnalare immediatamente al CEA ADR.",
+        "Attendere la fine del rifornimento.",
+        "Coprirla con materiale qualsiasi e proseguire."
+      ],
+      "correct": 0,
+      "category": "Rifornimento",
+      "manualPage": 32
+    },
+    {
+      "question": "Durante le procedure di bassa visibilità (LVP) sono autorizzati alla circolazione:",
+      "options": [
+        "Solo i mezzi strettamente necessari all’operatività aeroportuale.",
+        "Tutti i mezzi senza limitazioni.",
+        "Solo i mezzi privati."
+      ],
+      "correct": 0,
+      "category": "LVP",
+      "manualPage": 56
+    },
+    {
+      "question": "In LVP tutti i mezzi in servizio devono:",
+      "options": [
+        "Tenere i fari accesi e procedere con massima cautela e velocità ridotta.",
+        "Usare gli abbaglianti.",
+        "Procedere alla velocità normale."
+      ],
+      "correct": 0,
+      "category": "LVP",
+      "manualPage": 56
+    },
+    {
+      "question": "In LVP, durante l’attraversamento delle taxiway, in caso di dubbio o visibilità insufficiente:",
+      "options": [
+        "Il conducente deve attendere allo stop.",
+        "Può attraversare rapidamente.",
+        "Deve usare gli abbaglianti."
+      ],
+      "correct": 0,
+      "category": "LVP",
+      "manualPage": 56
+    },
+    {
+      "question": "Un conducente senza ADC che deve condurre un mezzo in Airside, nei casi di scorta previsti, deve:",
+      "options": [
+        "Essere scortato dalla Sicurezza Operativa ADR secondo le procedure.",
+        "Essere scortato da qualsiasi collega.",
+        "Esibire solo la patente B."
+      ],
+      "correct": 0,
+      "category": "Scorta",
+      "manualPage": 21
+    },
+    {
+      "question": "Per accedere in Area di Manovra senza ADC-M, il veicolo deve essere:",
+      "options": [
+        "Scortato dalla Sicurezza Operativa ADR per mantenere il contatto con la TWR.",
+        "Scortato da un collega qualsiasi.",
+        "Autorizzato solo dalla compagnia aerea."
+      ],
+      "correct": 0,
+      "category": "Scorta",
+      "manualPage": 22
+    },
+    {
+      "question": "La frequenza Torre UHF di Fiumicino indicata nel manuale è:",
+      "options": [
+        "445.775 MHz.",
+        "418.4 MHz.",
+        "121.5 MHz."
+      ],
+      "correct": 0,
+      "category": "Dotazioni",
+      "manualPage": 27
+    },
+    {
+      "question": "La frequenza Torre UHF di Ciampino indicata nel manuale è:",
+      "options": [
+        "418.4 MHz.",
+        "445.775 MHz.",
+        "121.5 MHz."
+      ],
+      "correct": 0,
+      "category": "Dotazioni",
+      "manualPage": 27
+    },
+    {
+      "question": "I veicoli individuati dalle disposizioni devono avere un transponder A-SMGCS con frequenza:",
+      "options": [
+        "1090 MHz.",
+        "445.775 MHz.",
+        "418.4 MHz."
+      ],
+      "correct": 0,
+      "category": "Dotazioni",
+      "manualPage": 27
+    },
+    {
+      "question": "La Grid Map aeroportuale prevista per i veicoli individuati è:",
+      "options": [
+        "In formato A3, realizzata con materiale plastificato resistente all’acqua.",
+        "Solo digitale su smartphone personale.",
+        "Formato A5 non plastificato."
+      ],
+      "correct": 0,
+      "category": "Dotazioni",
+      "manualPage": 27
+    },
+    {
+      "question": "L’automezzo antincendio in emergenza con luci blu accese:",
+      "options": [
+        "Ha la precedenza sugli altri mezzi.",
+        "Deve dare precedenza a tutti.",
+        "Ha precedenza solo sui mezzi ADR."
+      ],
+      "correct": 0,
+      "category": "Mezzi",
+      "manualPage": 12
+    },
+    {
+      "question": "L’autocisterna per rifornimento carburante:",
+      "options": [
+        "Ha precedenza sui mezzi aeroportuali, salvo i veicoli in emergenza.",
+        "Non ha mai precedenza.",
+        "Ha precedenza sugli aeromobili."
+      ],
+      "correct": 0,
+      "category": "Mezzi",
+      "manualPage": 12
+    },
+    {
+      "question": "Il bus interpista con passeggeri a bordo:",
+      "options": [
+        "Ha precedenza sugli altri mezzi.",
+        "Non ha mai precedenza.",
+        "Ha precedenza solo sui veicoli ENAC."
+      ],
+      "correct": 0,
+      "category": "Mezzi",
+      "manualPage": 13
+    },
+    {
+      "question": "Il mezzo sgombraneve ha:",
+      "options": [
+        "Obbligo di collegamento radio con TWR.",
+        "Divieto di radio.",
+        "Solo cellulare personale."
+      ],
+      "correct": 0,
+      "category": "Mezzi",
+      "manualPage": 15
+    },
+    {
+      "question": "Le ADC in dotazione hanno inizialmente:",
+      "options": [
+        "5 punti.",
+        "10 punti.",
+        "3 punti."
+      ],
+      "correct": 0,
+      "category": "Sanzioni",
+      "manualPage": 6
+    },
+    {
+      "question": "All’esaurimento dei punti dell’ADC:",
+      "options": [
+        "L’abilitazione viene revocata e può essere nuovamente conseguita secondo le modalità previste per il primo rilascio.",
+        "L’ADC viene rinnovata automaticamente.",
+        "Si aggiungono 5 punti."
+      ],
+      "correct": 0,
+      "category": "Sanzioni",
+      "manualPage": 7
+    },
+    {
+      "question": "Il mancato rispetto della segnaletica orizzontale e verticale è descritto dal manuale come:",
+      "options": [
+        "Una grave violazione delle regole di circolazione in Airside.",
+        "Una semplice raccomandazione.",
+        "Un comportamento facoltativo."
+      ],
+      "correct": 0,
+      "category": "Sanzioni",
+      "manualPage": 33
+    },
+    {
+      "question": "La mancata esposizione del tesserino, secondo la tabella sanzionatoria riportata nel manuale, comporta:",
+      "options": [
+        "La decurtazione prevista dalla tabella punti del manuale.",
+        "Nessuna conseguenza.",
+        "La revoca automatica dopo un solo episodio."
+      ],
+      "correct": 0,
+      "category": "Sanzioni",
+      "manualPage": 7
+    },
+    {
+      "question": "Per i percorsi tra varchi e piazzole e viceversa, il manuale richiede:",
+      "options": [
+        "Percorsi sempre più brevi, nel rispetto dei limiti e della cautela.",
+        "Percorsi più lunghi per evitare le veicolari.",
+        "Qualsiasi percorso."
+      ],
+      "correct": 0,
+      "category": "Circolazione",
+      "manualPage": 34
+    },
+    {
+      "question": "È consentito attraversare i piazzali aeromobili alla guida del proprio veicolo fuori dalla viabilità predisposta?",
+      "options": [
+        "No, i veicoli devono seguire esclusivamente la viabilità predisposta.",
+        "Sì, se non ci sono aeromobili.",
+        "Sì, a passo d’uomo."
+      ],
+      "correct": 0,
+      "category": "Circolazione",
+      "manualPage": 33
+    },
+    {
+      "question": "Le vie di rullaggio possono essere percorse come un aeromobile:",
+      "options": [
+        "No, salvo i veicoli operativi ADR, manutenzione ADR ed ENAC in intervento con luce gialla lampeggiante.",
+        "Sì, da qualsiasi ADC-A.",
+        "Sì, di notte."
+      ],
+      "correct": 0,
+      "category": "Circolazione",
+      "manualPage": 33
+    },
+    {
+      "question": "I mezzi di rampa devono evitare di occupare:",
+      "options": [
+        "NPA e le aircraft stand taxilane adiacenti ai parcheggi.",
+        "Solo la strada perimetrale.",
+        "Solo i terminal."
+      ],
+      "correct": 0,
+      "category": "Piazzola",
+      "manualPage": 58
+    },
+    {
+      "question": "In caso di forte vento, il mezzo parcheggiato deve avere:",
+      "options": [
+        "Il freno di stazionamento attivato.",
+        "Il motore acceso.",
+        "Le porte aperte."
+      ],
+      "correct": 0,
+      "category": "Meteo",
+      "manualPage": 56
+    },
+    {
+      "question": "Durante LVP le operazioni di rifornimento carburante con passeggeri a bordo sono:",
+      "options": [
+        "Sospese.",
+        "Sempre consentite.",
+        "Consentite solo di notte."
+      ],
+      "correct": 0,
+      "category": "LVP",
+      "manualPage": 56
+    },
+    {
+      "question": "In caso di neve o ghiaccio al suolo, gli operatori devono:",
+      "options": [
+        "Assicurare mezzi/dotazioni utili a garantire la tenuta di strada dei veicoli.",
+        "Usare sempre gli abbaglianti.",
+        "Sospendere ogni attività senza eccezioni."
+      ],
+      "correct": 0,
+      "category": "Meteo",
+      "manualPage": 56
+    },
+    {
+      "question": "Il conducente deve accertarsi che il proprio veicolo non generi:",
+      "options": [
+        "FOD e perdite di idrocarburi.",
+        "Solo rumore.",
+        "Solo polvere."
+      ],
+      "correct": 0,
+      "category": "Safety",
+      "manualPage": 32
+    },
+    {
+      "question": "Per la sosta sottobordo il conducente deve:",
+      "options": [
+        "Spegnere il motore, inserire marcia e freno di parcheggio, lasciare la chiave inserita e chiudere le portiere senza chiuderle a chiave.",
+        "Lasciare il motore al minimo e chiudere a chiave.",
+        "Lasciare il veicolo senza freno."
+      ],
+      "correct": 0,
+      "category": "Sosta",
+      "manualPage": 37
+    },
+    {
+      "question": "Durante la sosta sottobordo è vietato parcheggiare:",
+      "options": [
+        "In modo da ostacolare imbarco/sbarco, rifornimento o vie di fuga, sotto le ali, vicino ai motori o sotto i pontili.",
+        "Solo sulla viabilità.",
+        "Solo vicino alla torre."
+      ],
+      "correct": 0,
+      "category": "Sosta",
+      "manualPage": 37
+    },
+    {
+      "question": "L’area di manovra è accessibile:",
+      "options": [
+        "Al personale in possesso di ADC-M e con mezzo in collegamento con la torre, oppure secondo le procedure di scorta previste.",
+        "A tutti gli operatori con ADC-A.",
+        "A tutti i veicoli privati."
+      ],
+      "correct": 0,
+      "category": "ADC",
+      "manualPage": 21
+    },
+    {
+      "question": "L’abilitazione ADC è:",
+      "options": [
+        "Personale, non cedibile e non sostituisce la patente civile.",
+        "Cedibile all’azienda.",
+        "Sostitutiva della patente civile."
+      ],
+      "correct": 0,
+      "category": "ADC",
+      "manualPage": 17
+    },
+    {
+      "question": "Il titolare ADC deve notificare immediatamente al datore di lavoro:",
+      "options": [
+        "Rinnovo, scadenza o ritiro della patente di guida.",
+        "Solo il cambio di veicolo.",
+        "Solo il cambio turno."
+      ],
+      "correct": 0,
+      "category": "ADC",
+      "manualPage": 17
+    },
+    {
+      "question": "Dopo aver superato l’esame teorico, l’ADC deve essere ritirata entro:",
+      "options": [
+        "30 giorni dalla data del superamento dell’esame.",
+        "90 giorni.",
+        "365 giorni."
+      ],
+      "correct": 0,
+      "category": "ADC",
+      "manualPage": 18
+    },
+    {
+      "question": "In caso di mancato superamento dell’esame teorico, prima di ripeterlo devono trascorrere almeno:",
+      "options": [
+        "2 settimane.",
+        "2 giorni.",
+        "2 mesi."
+      ],
+      "correct": 0,
+      "category": "Formazione",
+      "manualPage": 18
+    },
+    {
+      "question": "Il Safety Aeroportuale Modulo 2 deve essere in corso di validità e non superiore a:",
+      "options": [
+        "24 mesi dalla data di rilascio.",
+        "48 mesi.",
+        "12 mesi."
+      ],
+      "correct": 0,
+      "category": "Formazione",
+      "manualPage": 20
+    },
+    {
+      "question": "L’Airside Safety costituisce:",
+      "options": [
+        "Parte integrante delle conoscenze necessarie per operare in Airside.",
+        "Un corso facoltativo.",
+        "Un corso riservato ai passeggeri."
+      ],
+      "correct": 0,
+      "category": "Safety",
+      "manualPage": 5
+    },
+    {
+      "question": "Qual è il numero CEA ADR Fiumicino riportato nel manuale per segnalare perdite di idrocarburi?",
+      "options": [
+        "06 6595-3022.",
+        "06 6595-9370.",
+        "445.775."
+      ],
+      "correct": 0,
+      "category": "Emergenze",
+      "manualPage": 32
+    },
+    {
+      "question": "Qual è il numero CEA ADR Ciampino riportato nel manuale per segnalare perdite di idrocarburi?",
+      "options": [
+        "06 6595-9370.",
+        "06 6595-3022.",
+        "418.4."
+      ],
+      "correct": 0,
+      "category": "Emergenze",
+      "manualPage": 32
+    }
+  ]
+}
