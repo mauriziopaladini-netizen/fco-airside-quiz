@@ -1,0 +1,1361 @@
+{
+  "title": "FCO/CIA ADC M – Area di Manovra",
+  "version": "Volume 2 Rev.1 – 28/10/2019",
+  "source": "ADR – E-16 ADC Volume 2 Abilitazione alla guida in Area di Manovra, Aeroporto Leonardo da Vinci Roma Fiumicino",
+  "count": 123,
+  "questions": [
+    {
+      "question": "Con l’ADC di tipo M si può accedere a quali aree?",
+      "options": [
+        "All’Area di Manovra, che comprende piste di volo e vie di rullaggio.",
+        "Solo ai piazzali aeromobili.",
+        "Solo alla strada perimetrale."
+      ],
+      "correct": 0,
+      "category": "ADC M e Area di Manovra",
+      "manualPage": 7
+    },
+    {
+      "question": "Quante piste di volo sono indicate nel Volume 2 per l’Aeroporto di Fiumicino?",
+      "options": [
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 1,
+      "category": "Piste e orientamento",
+      "manualPage": 7
+    },
+    {
+      "question": "Qual è l’orientamento della pista 16R/34L?",
+      "options": [
+        "Circa 070°/250°",
+        "Circa 160°/340°",
+        "Circa 180°/360°"
+      ],
+      "correct": 1,
+      "category": "Piste e orientamento",
+      "manualPage": 7
+    },
+    {
+      "question": "Qual è l’orientamento della pista 07/25?",
+      "options": [
+        "Circa 070°/250°",
+        "Circa 160°/340°",
+        "Circa 090°/270°"
+      ],
+      "correct": 0,
+      "category": "Piste e orientamento",
+      "manualPage": 7
+    },
+    {
+      "question": "Qual è l’orientamento della pista 16L/34R?",
+      "options": [
+        "Circa 070°/250°",
+        "Circa 160°/340°",
+        "Circa 120°/300°"
+      ],
+      "correct": 1,
+      "category": "Piste e orientamento",
+      "manualPage": 7
+    },
+    {
+      "question": "Nella denominazione 16R, cosa indica la lettera R?",
+      "options": [
+        "Right, destra",
+        "Runway, pista",
+        "Red, rosso"
+      ],
+      "correct": 0,
+      "category": "Piste e orientamento",
+      "manualPage": 7
+    },
+    {
+      "question": "Nella denominazione 34L, cosa indica la lettera L?",
+      "options": [
+        "Light",
+        "Left, sinistra",
+        "Landing"
+      ],
+      "correct": 1,
+      "category": "Piste e orientamento",
+      "manualPage": 7
+    },
+    {
+      "question": "Le due testate della stessa pista differiscono di quale valore numerico?",
+      "options": [
+        "9",
+        "18",
+        "36"
+      ],
+      "correct": 1,
+      "category": "Piste e orientamento",
+      "manualPage": 7
+    },
+    {
+      "question": "Il numero della testata di pista rappresenta quale informazione?",
+      "options": [
+        "La velocità massima dell’aeromobile",
+        "La decima parte dell’angolo rispetto al nord magnetico, arrotondata alla decina più prossima",
+        "La lunghezza della pista in centinaia di metri"
+      ],
+      "correct": 1,
+      "category": "Piste e orientamento",
+      "manualPage": 7
+    },
+    {
+      "question": "A cosa servono le testate di pista per il pilota?",
+      "options": [
+        "A identificare la pista in uso e la direzione di decollo o atterraggio",
+        "A indicare la posizione dei parcheggi auto",
+        "A indicare il limite di velocità dei veicoli"
+      ],
+      "correct": 0,
+      "category": "Piste e orientamento",
+      "manualPage": 9
+    },
+    {
+      "question": "Che cos’è la soglia pista (Threshold)?",
+      "options": [
+        "L’inizio della porzione di pista utilizzabile per l’atterraggio",
+        "La fine della pista",
+        "La zona riservata ai mezzi antincendio"
+      ],
+      "correct": 0,
+      "category": "Caratteristiche pista",
+      "manualPage": 10
+    },
+    {
+      "question": "Che cos’è la banchina (Shoulder)?",
+      "options": [
+        "Un’area adiacente al bordo della superficie pavimentata che costituisce una transizione verso la superficie adiacente",
+        "La zona di contatto",
+        "La striscia centrale della pista"
+      ],
+      "correct": 0,
+      "category": "Caratteristiche pista",
+      "manualPage": 10
+    },
+    {
+      "question": "Che cos’è la TDZ (Touch-Down Zone)?",
+      "options": [
+        "La zona oltre la soglia dove è previsto il primo contatto dell’aeromobile con la pista",
+        "La zona esterna alla pista",
+        "La strada perimetrale"
+      ],
+      "correct": 0,
+      "category": "Caratteristiche pista",
+      "manualPage": 10
+    },
+    {
+      "question": "La runway strip si estende simmetricamente rispetto all’asse pista per almeno quanto?",
+      "options": [
+        "50 m",
+        "100 m",
+        "150 m"
+      ],
+      "correct": 2,
+      "category": "Caratteristiche pista",
+      "manualPage": 10
+    },
+    {
+      "question": "Oltre la pista e le relative zone di arresto, la runway strip si estende per una distanza di almeno:",
+      "options": [
+        "30 m",
+        "60 m",
+        "120 m"
+      ],
+      "correct": 1,
+      "category": "Caratteristiche pista",
+      "manualPage": 10
+    },
+    {
+      "question": "Qual è lo scopo della RESA?",
+      "options": [
+        "Ridurre il rischio di danni agli aeromobili che atterrano troppo corti o escono oltre la fine pista",
+        "Indicare il punto di attesa intermedio",
+        "Proteggere i veicoli dal jet blast"
+      ],
+      "correct": 0,
+      "category": "Caratteristiche pista",
+      "manualPage": 10
+    },
+    {
+      "question": "Come sono costituiti i markings di bordo pista?",
+      "options": [
+        "Da due strisce bianche parallele lungo i bordi della pista",
+        "Da una striscia gialla centrale",
+        "Da croci rosse"
+      ],
+      "correct": 0,
+      "category": "Segnaletica pista",
+      "manualPage": 11
+    },
+    {
+      "question": "Quanto è lunga almeno la striscia a tratti del marking di asse pista?",
+      "options": [
+        "10 m",
+        "20 m",
+        "30 m"
+      ],
+      "correct": 2,
+      "category": "Segnaletica pista",
+      "manualPage": 11
+    },
+    {
+      "question": "I markings di soglia pista sono costituiti da:",
+      "options": [
+        "Una serie di strisce parallele bianche disposte simmetricamente rispetto all’asse pista",
+        "Una linea rossa continua",
+        "Una doppia linea gialla"
+      ],
+      "correct": 0,
+      "category": "Segnaletica pista",
+      "manualPage": 11
+    },
+    {
+      "question": "A quanti metri dall’inizio della pista utile per l’atterraggio hanno origine i markings di soglia?",
+      "options": [
+        "3 m",
+        "6 m",
+        "12 m"
+      ],
+      "correct": 1,
+      "category": "Segnaletica pista",
+      "manualPage": 11
+    },
+    {
+      "question": "Come sono configurati i markings TDZ presso Fiumicino?",
+      "options": [
+        "Coppie doppie di 3, 2 e 1 strisce",
+        "Una sola striscia gialla",
+        "Croci rosse e bianche"
+      ],
+      "correct": 0,
+      "category": "Segnaletica pista",
+      "manualPage": 11
+    },
+    {
+      "question": "Qual è la funzione dei markings TDZ?",
+      "options": [
+        "Fornire al pilota un’indicazione della distanza progressiva dalla soglia pista",
+        "Indicare la direzione della taxiway",
+        "Indicare il limite dell’area critica"
+      ],
+      "correct": 0,
+      "category": "Segnaletica pista",
+      "manualPage": 11
+    },
+    {
+      "question": "Di che colore sono le luci d’asse pista dalla soglia fino a 900 m dal fine pista?",
+      "options": [
+        "Bianco",
+        "Rosso",
+        "Giallo"
+      ],
+      "correct": 0,
+      "category": "AVL pista",
+      "manualPage": 12
+    },
+    {
+      "question": "Come sono le luci d’asse pista da 900 m a 300 m dal fine pista?",
+      "options": [
+        "Giallo fisso",
+        "Bianco e rosso alternato",
+        "Rosso e verde alternato"
+      ],
+      "correct": 1,
+      "category": "AVL pista",
+      "manualPage": 12
+    },
+    {
+      "question": "Di che colore sono le luci d’asse negli ultimi 300 m prima del fine pista?",
+      "options": [
+        "Verde",
+        "Giallo",
+        "Rosso"
+      ],
+      "correct": 2,
+      "category": "AVL pista",
+      "manualPage": 12
+    },
+    {
+      "question": "Quando sono attivate le luci di bordo pista secondo il manuale?",
+      "options": [
+        "Per decolli con RVR inferiore a 800 m e di notte, o per avvicinamenti di precisione",
+        "Solo durante il giorno",
+        "Solo quando la RVR supera 800 m"
+      ],
+      "correct": 0,
+      "category": "AVL pista",
+      "manualPage": 12
+    },
+    {
+      "question": "Di che colore sono normalmente le luci di bordo pista?",
+      "options": [
+        "Blu",
+        "Bianco",
+        "Rosso"
+      ],
+      "correct": 1,
+      "category": "AVL pista",
+      "manualPage": 12
+    },
+    {
+      "question": "Negli ultimi 600 m in direzione di decollo, le luci di bordo pista diventano:",
+      "options": [
+        "Gialle",
+        "Rosse",
+        "Verdi"
+      ],
+      "correct": 0,
+      "category": "AVL pista",
+      "manualPage": 12
+    },
+    {
+      "question": "Di che colore sono le luci di soglia pista?",
+      "options": [
+        "Rosso",
+        "Verde",
+        "Blu"
+      ],
+      "correct": 1,
+      "category": "AVL pista",
+      "manualPage": 12
+    },
+    {
+      "question": "Le luci TDZ si estendono dalla soglia fino a:",
+      "options": [
+        "300 m",
+        "600 m",
+        "900 m"
+      ],
+      "correct": 2,
+      "category": "AVL pista",
+      "manualPage": 12
+    },
+    {
+      "question": "Di che colore sono le luci TDZ?",
+      "options": [
+        "Bianco",
+        "Giallo",
+        "Rosso"
+      ],
+      "correct": 0,
+      "category": "AVL pista",
+      "manualPage": 12
+    },
+    {
+      "question": "Di che colore sono le luci di fine pista?",
+      "options": [
+        "Verde",
+        "Rosso",
+        "Bianco"
+      ],
+      "correct": 1,
+      "category": "AVL pista",
+      "manualPage": 12
+    },
+    {
+      "question": "Quale taxiway è parallela alla RWY 16R/34L?",
+      "options": [
+        "TWY A",
+        "TWY B",
+        "TWY D"
+      ],
+      "correct": 0,
+      "category": "Taxiway Fiumicino",
+      "manualPage": 13
+    },
+    {
+      "question": "Quale taxiway è parallela alla RWY 07/25?",
+      "options": [
+        "TWY A",
+        "TWY B",
+        "TWY D"
+      ],
+      "correct": 1,
+      "category": "Taxiway Fiumicino",
+      "manualPage": 13
+    },
+    {
+      "question": "Quale taxiway è parallela alla RWY 16L/34R?",
+      "options": [
+        "TWY A",
+        "TWY B",
+        "TWY D"
+      ],
+      "correct": 2,
+      "category": "Taxiway Fiumicino",
+      "manualPage": 13
+    },
+    {
+      "question": "Quale gruppo collega la TWY A alla RWY 16R/34L secondo il manuale?",
+      "options": [
+        "AA, AB, AC, AD, AE, AF, AG, AH, AK e AL",
+        "BA, BB, BC, BD, BE, BF e BG",
+        "DA, DB, DC, DE, DF, DG, DH, DK e DL"
+      ],
+      "correct": 0,
+      "category": "Taxiway Fiumicino",
+      "manualPage": 13
+    },
+    {
+      "question": "Quale gruppo collega la TWY B alla RWY 07/25?",
+      "options": [
+        "AA, AB, AC, AD",
+        "BA, BB, BC, BD, BE, BF, BG",
+        "DA, DB, DC, DE"
+      ],
+      "correct": 1,
+      "category": "Taxiway Fiumicino",
+      "manualPage": 13
+    },
+    {
+      "question": "Quale gruppo collega la TWY D alla RWY 16L/34R?",
+      "options": [
+        "DA, DB, DC, DE, DF, DG, DH, DK e DL",
+        "BA, BB, BC, BD, BE, BF, BG",
+        "AA, AB, AC, AD, AE, AF"
+      ],
+      "correct": 0,
+      "category": "Taxiway Fiumicino",
+      "manualPage": 13
+    },
+    {
+      "question": "Quali TWY collegano la TWY C alla TWY D?",
+      "options": [
+        "CD, CE, CH, CL",
+        "AA, AB, AC, AD",
+        "DA, DB, DC, DD"
+      ],
+      "correct": 0,
+      "category": "Taxiway Fiumicino",
+      "manualPage": 13
+    },
+    {
+      "question": "Quali ulteriori taxiway sono totalmente comprese nell’Area di Manovra?",
+      "options": [
+        "N e DM",
+        "Y e W",
+        "M e T"
+      ],
+      "correct": 0,
+      "category": "Taxiway Fiumicino",
+      "manualPage": 13
+    },
+    {
+      "question": "Quale dei seguenti gruppi è indicato come collegamento tra Area di Manovra e Apron?",
+      "options": [
+        "Y, W, V, M, BT, T, R, G, P, NG, EA",
+        "AA, AB, AC, AD, AE",
+        "DA, DB, DC, DE, DF"
+      ],
+      "correct": 0,
+      "category": "Taxiway Fiumicino",
+      "manualPage": 14
+    },
+    {
+      "question": "La segnaletica delle taxiway può essere:",
+      "options": [
+        "Solo verticale",
+        "Solo orizzontale",
+        "Verticale e orizzontale"
+      ],
+      "correct": 2,
+      "category": "Segnaletica taxiway",
+      "manualPage": 14
+    },
+    {
+      "question": "La segnaletica informativa di posizione e direzione serve a:",
+      "options": [
+        "Indicare dove ci si trova e i percorsi da seguire",
+        "Indicare il carburante disponibile",
+        "Indicare la velocità dell’aeromobile"
+      ],
+      "correct": 0,
+      "category": "Segnaletica taxiway",
+      "manualPage": 14
+    },
+    {
+      "question": "Nel senso di marcia descritto nel manuale, sulla TWY B continuando dritto si interessa:",
+      "options": [
+        "TWY C",
+        "TWY BA",
+        "TWY DM"
+      ],
+      "correct": 0,
+      "category": "Segnaletica taxiway",
+      "manualPage": 15
+    },
+    {
+      "question": "Nel medesimo esempio, dalla TWY B girando a sinistra si interessa:",
+      "options": [
+        "TWY C",
+        "TWY BA",
+        "TWY DM"
+      ],
+      "correct": 1,
+      "category": "Segnaletica taxiway",
+      "manualPage": 15
+    },
+    {
+      "question": "Nel medesimo esempio, dalla TWY B girando a destra si interessa:",
+      "options": [
+        "TWY C",
+        "TWY BA",
+        "TWY DM"
+      ],
+      "correct": 2,
+      "category": "Segnaletica taxiway",
+      "manualPage": 15
+    },
+    {
+      "question": "Dalla TWY BA, proseguendo dritto si interessa:",
+      "options": [
+        "TWY DM",
+        "TWY C",
+        "TWY A"
+      ],
+      "correct": 0,
+      "category": "Segnaletica taxiway",
+      "manualPage": 15
+    },
+    {
+      "question": "Dalla TWY BA, girando a destra si interessa:",
+      "options": [
+        "TWY B",
+        "TWY D",
+        "TWY C"
+      ],
+      "correct": 0,
+      "category": "Segnaletica taxiway",
+      "manualPage": 15
+    },
+    {
+      "question": "Sulla TWY DM, proseguendo si interseca la TWY D:",
+      "options": [
+        "Solo a sinistra",
+        "A destra e a sinistra",
+        "Mai"
+      ],
+      "correct": 1,
+      "category": "Segnaletica taxiway",
+      "manualPage": 15
+    },
+    {
+      "question": "Entrando in pista dal raccordo AB, la testata 34L è:",
+      "options": [
+        "A destra",
+        "A sinistra",
+        "Alle spalle"
+      ],
+      "correct": 1,
+      "category": "Segnaletica taxiway",
+      "manualPage": 16
+    },
+    {
+      "question": "Entrando in pista dal raccordo AB, la testata 16R è:",
+      "options": [
+        "A destra",
+        "A sinistra",
+        "Alle spalle"
+      ],
+      "correct": 0,
+      "category": "Segnaletica taxiway",
+      "manualPage": 16
+    },
+    {
+      "question": "La tabella associata alla TWY AB indica una Take Off Distance Available di:",
+      "options": [
+        "2000 m",
+        "2500 m",
+        "3000 m"
+      ],
+      "correct": 2,
+      "category": "Segnaletica taxiway",
+      "manualPage": 16
+    },
+    {
+      "question": "Qual è lo scopo delle Runway Holding Position (RHP)?",
+      "options": [
+        "Proteggere il traffico presente sulla pista di volo",
+        "Indicare la posizione di un parcheggio",
+        "Separare due aree Apron"
+      ],
+      "correct": 0,
+      "category": "RHP e ingresso pista",
+      "manualPage": 17
+    },
+    {
+      "question": "Alla RHP, per entrare in pista, cosa occorre fare?",
+      "options": [
+        "Entrare se la pista sembra libera",
+        "Fermarsi e chiedere ulteriore autorizzazione alla TWR",
+        "Spegnere la radio"
+      ],
+      "correct": 1,
+      "category": "RHP e ingresso pista",
+      "manualPage": 17
+    },
+    {
+      "question": "In presenza di più RHP presso una pista strumentale di precisione, la configurazione A è usata:",
+      "options": [
+        "Per la posizione più vicina alla pista",
+        "Per la posizione più lontana dalla pista",
+        "Solo sulle taxiway"
+      ],
+      "correct": 0,
+      "category": "RHP e ingresso pista",
+      "manualPage": 17
+    },
+    {
+      "question": "La configurazione B è usata:",
+      "options": [
+        "Per le RHP più lontane dalla pista",
+        "Per la RHP più vicina alla pista",
+        "Per le stop bar"
+      ],
+      "correct": 0,
+      "category": "RHP e ingresso pista",
+      "manualPage": 17
+    },
+    {
+      "question": "A Fiumicino, quali pattern RHP sono indicati nel manuale?",
+      "options": [
+        "Solo di tipo A",
+        "Solo di tipo B",
+        "A e B in uguale misura"
+      ],
+      "correct": 0,
+      "category": "RHP e ingresso pista",
+      "manualPage": 17
+    },
+    {
+      "question": "Che cos’è il marking RWY AHEAD?",
+      "options": [
+        "Un’informazione di allerta prima dell’ingresso in pista",
+        "Un segnale di divieto di sosta",
+        "Una luce di taxiway"
+      ],
+      "correct": 0,
+      "category": "RHP e ingresso pista",
+      "manualPage": 17
+    },
+    {
+      "question": "La segnaletica con caratteri bianchi su sfondo rosso è:",
+      "options": [
+        "Segnaletica informativa facoltativa",
+        "Segnaletica con istruzioni di obbligo",
+        "Segnaletica per il parcheggio"
+      ],
+      "correct": 1,
+      "category": "RHP e ingresso pista",
+      "manualPage": 17
+    },
+    {
+      "question": "Superare il pattern A in prossimità della RHP significa:",
+      "options": [
+        "Occupare la pista di volo",
+        "Uscire dall’Area di Manovra",
+        "Entrare nell’Apron"
+      ],
+      "correct": 0,
+      "category": "RHP e ingresso pista",
+      "manualPage": 19
+    },
+    {
+      "question": "Una runway incursion è, nel contesto descritto, l’occupazione:",
+      "options": [
+        "Autorizzata della pista",
+        "Non autorizzata della pista di volo",
+        "Della strada perimetrale"
+      ],
+      "correct": 1,
+      "category": "RHP e ingresso pista",
+      "manualPage": 19
+    },
+    {
+      "question": "La scritta CATIII presso la posizione descritta indica una pista di precisione dotata di:",
+      "options": [
+        "ILS",
+        "VOR soltanto",
+        "Solo luci di bordo"
+      ],
+      "correct": 0,
+      "category": "RHP e ingresso pista",
+      "manualPage": 19
+    },
+    {
+      "question": "Il marking “RWY VACATED” indica che, superata la posizione indicata, occorre:",
+      "options": [
+        "Informare TWR di aver liberato la pista",
+        "Spegnere il motore",
+        "Rientrare nell’Apron senza radio"
+      ],
+      "correct": 0,
+      "category": "RHP e ingresso pista",
+      "manualPage": 19
+    },
+    {
+      "question": "Il marking Rwy Ahead è utilizzato presso raccordi di ingresso in pista di aeroporti CAT II e III per:",
+      "options": [
+        "Fornire un’ulteriore informazione di allerta in bassa visibilità",
+        "Indicare la fine della strada perimetrale",
+        "Segnalare un parcheggio"
+      ],
+      "correct": 0,
+      "category": "RHP e ingresso pista",
+      "manualPage": 20
+    },
+    {
+      "question": "La TWY DF è utilizzabile, secondo il manuale, per:",
+      "options": [
+        "La sola uscita dalla pista di volo 34R/16L",
+        "Il solo ingresso in pista",
+        "L’ingresso e l’uscita in ogni condizione"
+      ],
+      "correct": 0,
+      "category": "No Entry e sensi di marcia",
+      "manualPage": 20
+    },
+    {
+      "question": "Quale gruppo è indicato per RWY 16R/34L nella tabella TWY No Entry?",
+      "options": [
+        "AD/AE/AF/AG/AH",
+        "BA/BB/BC",
+        "DC/DD/DE"
+      ],
+      "correct": 0,
+      "category": "No Entry e sensi di marcia",
+      "manualPage": 20
+    },
+    {
+      "question": "Quale gruppo è indicato per RWY 07/25 nella tabella TWY No Entry?",
+      "options": [
+        "AD/AE/AF/AG/AH",
+        "BE/BF/BG",
+        "DC/DD/DE/DF/DG/DH"
+      ],
+      "correct": 1,
+      "category": "No Entry e sensi di marcia",
+      "manualPage": 20
+    },
+    {
+      "question": "Quale gruppo è indicato per RWY 16L/34R nella tabella TWY No Entry?",
+      "options": [
+        "AA/AB/AC",
+        "BE/BF/BG",
+        "DC/DD/DE/DF/DG/DH"
+      ],
+      "correct": 2,
+      "category": "No Entry e sensi di marcia",
+      "manualPage": 20
+    },
+    {
+      "question": "Che cos’è una Intermediate Holding Position (IHP)?",
+      "options": [
+        "Una posizione in cui aeromobili e veicoli possono dover fermarsi e attendere l’autorizzazione a proseguire",
+        "Un’area di parcheggio",
+        "Una soglia pista"
+      ],
+      "correct": 0,
+      "category": "IHP",
+      "manualPage": 21
+    },
+    {
+      "question": "Quale funzione può avere una IHP?",
+      "options": [
+        "Proteggere il traffico sulla taxiway principale presso intersezioni taxiway/taxiway",
+        "Proteggere i parcheggi auto",
+        "Indicare il carburante"
+      ],
+      "correct": 0,
+      "category": "IHP",
+      "manualPage": 21
+    },
+    {
+      "question": "Le IHP possono essere utilizzate anche durante:",
+      "options": [
+        "Procedure di bassa visibilità (LVP)",
+        "Solo di giorno",
+        "Solo quando la pista è chiusa"
+      ],
+      "correct": 0,
+      "category": "IHP",
+      "manualPage": 21
+    },
+    {
+      "question": "Perché le IHP sono utilizzate in LVP?",
+      "options": [
+        "Per garantire una maggiore separazione tra gli aeromobili",
+        "Per aumentare la velocità dei veicoli",
+        "Per eliminare il contatto radio"
+      ],
+      "correct": 0,
+      "category": "IHP",
+      "manualPage": 21
+    },
+    {
+      "question": "Come viene identificata, nell’esempio del manuale, la IHP sulla TWY A?",
+      "options": [
+        "A2",
+        "B2",
+        "A20"
+      ],
+      "correct": 0,
+      "category": "IHP",
+      "manualPage": 21
+    },
+    {
+      "question": "Se su una taxiway sono presenti più IHP, come vengono denominate?",
+      "options": [
+        "Con la lettera della TWY e un numero progressivo da 1",
+        "Solo con numeri casuali",
+        "Con il colore della taxiway"
+      ],
+      "correct": 0,
+      "category": "IHP",
+      "manualPage": 21
+    },
+    {
+      "question": "Di che colore sono i catarifrangenti del bordo taxiway/piazzali?",
+      "options": [
+        "Blu",
+        "Verde",
+        "Rosso"
+      ],
+      "correct": 0,
+      "category": "AVL taxiway",
+      "manualPage": 22
+    },
+    {
+      "question": "Di che colore sono le luci d’asse delle taxiway?",
+      "options": [
+        "Verde",
+        "Bianco",
+        "Rosso"
+      ],
+      "correct": 0,
+      "category": "AVL taxiway",
+      "manualPage": 22
+    },
+    {
+      "question": "Le luci d’asse delle taxiway sono utilizzate anche per guidare gli aeromobili che entrano in pista quando:",
+      "options": [
+        "RVR < 400 m",
+        "RVR > 1000 m",
+        "È sempre giorno"
+      ],
+      "correct": 0,
+      "category": "AVL taxiway",
+      "manualPage": 22
+    },
+    {
+      "question": "La segnaletica di uscita dalla pista è alternata:",
+      "options": [
+        "Verde-ambra",
+        "Rosso-bianco",
+        "Blu-giallo"
+      ],
+      "correct": 0,
+      "category": "AVL taxiway",
+      "manualPage": 22
+    },
+    {
+      "question": "L’ultimo elemento ambra della segnaletica di uscita indica:",
+      "options": [
+        "Il termine dell’area sensibile dell’ILS",
+        "L’inizio della pista",
+        "La fine della strada perimetrale"
+      ],
+      "correct": 0,
+      "category": "AVL taxiway",
+      "manualPage": 22
+    },
+    {
+      "question": "Qual è il colore delle Stop Bars e Red Bars?",
+      "options": [
+        "Rosso",
+        "Verde",
+        "Blu"
+      ],
+      "correct": 0,
+      "category": "AVL taxiway",
+      "manualPage": 22
+    },
+    {
+      "question": "Qual è lo scopo principale delle Stop Bars e Red Bars?",
+      "options": [
+        "Impedire l’ingresso non autorizzato di aeromobili e veicoli in pista",
+        "Indicare la velocità massima",
+        "Segnalare un parcheggio"
+      ],
+      "correct": 0,
+      "category": "AVL taxiway",
+      "manualPage": 22
+    },
+    {
+      "question": "Quando una Stop Bar è accesa, il traffico deve:",
+      "options": [
+        "Fermarsi",
+        "Procedere lentamente",
+        "Attraversarla se la pista è libera"
+      ],
+      "correct": 0,
+      "category": "AVL taxiway",
+      "manualPage": 22
+    },
+    {
+      "question": "Quando una Stop Bar è spenta, secondo il manuale:",
+      "options": [
+        "Il traffico può procedere",
+        "Il traffico deve sempre fermarsi",
+        "La taxiway è chiusa"
+      ],
+      "correct": 0,
+      "category": "AVL taxiway",
+      "manualPage": 22
+    },
+    {
+      "question": "A Fiumicino, ad ogni RHP è associata:",
+      "options": [
+        "Una Stop Bar",
+        "Una RGL soltanto",
+        "Una Red Bar sempre accesa"
+      ],
+      "correct": 0,
+      "category": "AVL taxiway",
+      "manualPage": 23
+    },
+    {
+      "question": "Una Stop Bar accesa presso una RHP deve essere:",
+      "options": [
+        "Oltrepassata con cautela",
+        "Non oltrepassata mai",
+        "Oltrepassata solo dai veicoli ADR"
+      ],
+      "correct": 1,
+      "category": "AVL taxiway",
+      "manualPage": 23
+    },
+    {
+      "question": "In condizioni di bassa visibilità, le Red Bars si trovano sulle TWY unidirezionali:",
+      "options": [
+        "Destinate esclusivamente all’uscita degli aeromobili dalla pista",
+        "Destinate esclusivamente all’ingresso in pista",
+        "Destinate al parcheggio dei veicoli"
+      ],
+      "correct": 0,
+      "category": "AVL taxiway",
+      "manualPage": 23
+    },
+    {
+      "question": "Le Red Bars associate alla segnaletica di divieto di accesso sono:",
+      "options": [
+        "Permanentemente accese",
+        "Sempre spente",
+        "Accese solo di giorno"
+      ],
+      "correct": 0,
+      "category": "AVL taxiway",
+      "manualPage": 23
+    },
+    {
+      "question": "Cosa sono le RGL?",
+      "options": [
+        "Runway Guard Lights, luci di segnalazione dell’ingresso in pista",
+        "Radio Guidance Lights per l’Apron",
+        "Runway Green Lines"
+      ],
+      "correct": 0,
+      "category": "AVL taxiway",
+      "manualPage": 23
+    },
+    {
+      "question": "Dove sono poste le RGL?",
+      "options": [
+        "Ai punti di attesa RHP",
+        "Solo al centro dell’Apron",
+        "Sulla strada perimetrale"
+      ],
+      "correct": 0,
+      "category": "AVL taxiway",
+      "manualPage": 23
+    },
+    {
+      "question": "Che cos’è un’area critica?",
+      "options": [
+        "Un’area in cui la presenza di uomini e mezzi può compromettere seriamente la sicurezza del volo",
+        "Un parcheggio riservato ai mezzi",
+        "Una zona senza radio"
+      ],
+      "correct": 0,
+      "category": "Area critica e ILS",
+      "manualPage": 25
+    },
+    {
+      "question": "L’area critica si estende nell’intorno delle antenne di quale impianto?",
+      "options": [
+        "Di un impianto di avvicinamento strumentale di precisione",
+        "Di un impianto di illuminazione Apron",
+        "Della stazione carburante"
+      ],
+      "correct": 0,
+      "category": "Area critica e ILS",
+      "manualPage": 25
+    },
+    {
+      "question": "La presenza di veicoli o aeromobili nell’area critica può:",
+      "options": [
+        "Disturbare i segnali di radioguida",
+        "Aumentare la RVR",
+        "Spegnere automaticamente le luci pista"
+      ],
+      "correct": 0,
+      "category": "Area critica e ILS",
+      "manualPage": 25
+    },
+    {
+      "question": "Quale sistema è citato come insieme di strumenti per l’avvicinamento strumentale di precisione?",
+      "options": [
+        "ILS",
+        "GPS automobilistico",
+        "ADS-B"
+      ],
+      "correct": 0,
+      "category": "Area critica e ILS",
+      "manualPage": 25
+    },
+    {
+      "question": "Quali piste di Fiumicino sono indicate come CAT II/III nel manuale?",
+      "options": [
+        "16R e 16L",
+        "07 e 25",
+        "34R e 34L"
+      ],
+      "correct": 0,
+      "category": "Area critica e ILS",
+      "manualPage": 25
+    },
+    {
+      "question": "Quale avvicinamento è indicato per la pista 07?",
+      "options": [
+        "Strumentale non di precisione",
+        "CAT I",
+        "CAT II/III"
+      ],
+      "correct": 0,
+      "category": "Area critica e ILS",
+      "manualPage": 25
+    },
+    {
+      "question": "Quale avvicinamento è indicato per la pista 25?",
+      "options": [
+        "CAT I",
+        "Strumentale non di precisione",
+        "CAT II/III"
+      ],
+      "correct": 0,
+      "category": "Area critica e ILS",
+      "manualPage": 25
+    },
+    {
+      "question": "Quale avvicinamento è indicato per le piste 34R e 34L?",
+      "options": [
+        "CAT I",
+        "CAT II/III",
+        "Strumentale non di precisione"
+      ],
+      "correct": 0,
+      "category": "Area critica e ILS",
+      "manualPage": 25
+    },
+    {
+      "question": "Qual è la RVR minima indicata nel manuale per le operazioni descritte?",
+      "options": [
+        "75 m",
+        "150 m",
+        "300 m"
+      ],
+      "correct": 0,
+      "category": "Area critica e ILS",
+      "manualPage": 25
+    },
+    {
+      "question": "Al di sotto di quale RVR non sono consentite operazioni secondo il manuale?",
+      "options": [
+        "75 m",
+        "200 m",
+        "550 m"
+      ],
+      "correct": 0,
+      "category": "Area critica e ILS",
+      "manualPage": 25
+    },
+    {
+      "question": "Che cosa significa DH?",
+      "options": [
+        "Decision Height",
+        "Driving Height",
+        "Departure Heading"
+      ],
+      "correct": 0,
+      "category": "Area critica e ILS",
+      "manualPage": 26
+    },
+    {
+      "question": "Qual è la funzione della Decision Height descritta nel manuale?",
+      "options": [
+        "È il punto in cui il pilota decide se può proseguire l’atterraggio in base alla visibilità della pista",
+        "Indica la quota della strada perimetrale",
+        "Indica l’altezza del veicolo"
+      ],
+      "correct": 0,
+      "category": "Area critica e ILS",
+      "manualPage": 26
+    },
+    {
+      "question": "Da quali elementi sono riconoscibili le aree critiche?",
+      "options": [
+        "Recinzione con paletti rossi e bianchi, corda e cartelli di divieto di accesso",
+        "Solo da luci blu",
+        "Solo da una linea gialla"
+      ],
+      "correct": 0,
+      "category": "Area critica e ILS",
+      "manualPage": 26
+    },
+    {
+      "question": "Quali antenne sono citate nell’area critica?",
+      "options": [
+        "Guide di Planata (GP) e Localizzatori (LOC)",
+        "Solo antenne radio veicolari",
+        "Solo antenne telefoniche"
+      ],
+      "correct": 0,
+      "category": "Area critica e ILS",
+      "manualPage": 26
+    },
+    {
+      "question": "Nell’area critica l’accesso di uomini e mezzi è:",
+      "options": [
+        "Assolutamente vietato senza preventiva autorizzazione TWR",
+        "Libero per chiunque abbia ADC A",
+        "Consentito solo di notte"
+      ],
+      "correct": 0,
+      "category": "Area critica e ILS",
+      "manualPage": 26
+    },
+    {
+      "question": "Che cos’è l’area sensibile?",
+      "options": [
+        "Un’area oltre l’area critica dove traffico o parcheggio possono rendere inattendibile il segnale di radioguida",
+        "Una zona di parcheggio mezzi",
+        "Una zona riservata ai passeggeri"
+      ],
+      "correct": 0,
+      "category": "Area sensibile",
+      "manualPage": 26
+    },
+    {
+      "question": "L’area sensibile ILS deve essere:",
+      "options": [
+        "Sgombra da ogni traffico ad eccezione degli aeromobili operativi",
+        "Occupata dai mezzi di manutenzione",
+        "Sempre occupata da un veicolo ADR"
+      ],
+      "correct": 0,
+      "category": "Area sensibile",
+      "manualPage": 26
+    },
+    {
+      "question": "Chi può accedere alle aree verdi indicate nel manuale?",
+      "options": [
+        "Possessori di ADC M e permesso di accesso a banda rossa appositamente autorizzati",
+        "Qualsiasi conducente con patente B",
+        "Solo i passeggeri"
+      ],
+      "correct": 0,
+      "category": "Aree verdi e radio",
+      "manualPage": 26
+    },
+    {
+      "question": "Quale personale è espressamente indicato come autorizzato nelle aree verdi?",
+      "options": [
+        "VV.F. e personale ADR addetto a ispezioni/manutenzioni",
+        "Solo personale catering",
+        "Solo autisti taxi"
+      ],
+      "correct": 0,
+      "category": "Aree verdi e radio",
+      "manualPage": 26
+    },
+    {
+      "question": "Per circolare e stazionare nelle aree verdi è obbligatorio:",
+      "options": [
+        "Il costante contatto radio con TWR",
+        "Spegnere la radio",
+        "Usare solo il telefono personale"
+      ],
+      "correct": 0,
+      "category": "Aree verdi e radio",
+      "manualPage": 26
+    },
+    {
+      "question": "Per accedere alle strip indicate nel manuale occorre:",
+      "options": [
+        "Richiedere e ottenere l’autorizzazione TWR",
+        "Entrare senza comunicare se non ci sono aeromobili",
+        "Chiedere autorizzazione alla Polizia"
+      ],
+      "correct": 0,
+      "category": "Aree verdi e radio",
+      "manualPage": 26
+    },
+    {
+      "question": "La strip di volo della pista è indicata come estesa per:",
+      "options": [
+        "150 m dall’asse della runway",
+        "52 m dall’asse della runway",
+        "25 m dall’asse della runway"
+      ],
+      "correct": 0,
+      "category": "Aree verdi e radio",
+      "manualPage": 26
+    },
+    {
+      "question": "La strip delle taxiway è indicata nel Volume 2 Rev.1 come estesa per:",
+      "options": [
+        "52 m dall’asse della taxiway",
+        "150 m dall’asse della taxiway",
+        "10 m dall’asse della taxiway"
+      ],
+      "correct": 0,
+      "category": "Aree verdi e radio",
+      "manualPage": 26
+    },
+    {
+      "question": "Per operare in Area di Manovra è obbligatorio mantenere:",
+      "options": [
+        "Il continuo contatto radio con TWR",
+        "Solo il contatto telefonico con ADR",
+        "Nessun contatto se si possiede ADC M"
+      ],
+      "correct": 0,
+      "category": "Radiotelefonia",
+      "manualPage": 27
+    },
+    {
+      "question": "Per accedere all’Area di Manovra dall’Apron o dalla strada perimetrale è obbligatorio:",
+      "options": [
+        "Richiedere l’autorizzazione alla TWR",
+        "Entrare direttamente con ADC M",
+        "Attendere un mezzo follow-me in ogni caso"
+      ],
+      "correct": 0,
+      "category": "Radiotelefonia",
+      "manualPage": 27
+    },
+    {
+      "question": "Prima di entrare in una pista, anche se si è già in Area di Manovra, è necessario:",
+      "options": [
+        "Richiedere l’autorizzazione specifica alla TWR",
+        "Chiedere autorizzazione solo se la pista è occupata",
+        "Non fare nulla se si ha ADC M"
+      ],
+      "correct": 0,
+      "category": "Radiotelefonia",
+      "manualPage": 27
+    },
+    {
+      "question": "In Area di Manovra, oltre alla radio, occorre portare con sé:",
+      "options": [
+        "Un telefono cellulare da usare in caso di avaria radio per contattare TWR",
+        "Un secondo tesserino",
+        "Solo una torcia"
+      ],
+      "correct": 0,
+      "category": "Radiotelefonia",
+      "manualPage": 27
+    },
+    {
+      "question": "Quale documento deve essere tenuto a bordo del mezzo dagli operatori indicati?",
+      "options": [
+        "La Grid Map del Piano di Emergenza Aeroportuale",
+        "Il libretto dei tagliandi auto",
+        "La mappa stradale della città"
+      ],
+      "correct": 0,
+      "category": "Radiotelefonia",
+      "manualPage": 27
+    },
+    {
+      "question": "Quando si scende dal proprio veicolo è obbligatorio portare con sé:",
+      "options": [
+        "Una radio portatile",
+        "La Grid Map soltanto",
+        "Il telefono spento"
+      ],
+      "correct": 0,
+      "category": "Radiotelefonia",
+      "manualPage": 27
+    },
+    {
+      "question": "In caso di bassa visibilità, il Volume 2 indica il divieto di accesso e permanenza in Area di Manovra per:",
+      "options": [
+        "Tutti, tranne le categorie operative espressamente indicate",
+        "Solo i conducenti con ADC A",
+        "Nessuno"
+      ],
+      "correct": 0,
+      "category": "Radiotelefonia",
+      "manualPage": 27
+    },
+    {
+      "question": "Quali operatori sono indicati come autorizzati durante bassa visibilità nelle aree elencate?",
+      "options": [
+        "Sicurezza Operativa ADR, manutenzione AVL e Techno Sky",
+        "Tutti i conducenti ADC M",
+        "Solo personale catering"
+      ],
+      "correct": 0,
+      "category": "Radiotelefonia",
+      "manualPage": 27
+    },
+    {
+      "question": "Le comunicazioni radio con TWR devono rispettare quanto indicato:",
+      "options": [
+        "Nel Volume 3 “Radiotelefonia”",
+        "Nel Codice della Strada soltanto",
+        "Nel manuale di manutenzione veicoli"
+      ],
+      "correct": 0,
+      "category": "Radiotelefonia",
+      "manualPage": 27
+    },
+    {
+      "question": "È sempre vietato entrare nelle aree critiche senza:",
+      "options": [
+        "Il preventivo coordinamento con TWR",
+        "Una telefonata alla propria azienda",
+        "Una luce gialla sul veicolo"
+      ],
+      "correct": 0,
+      "category": "Radiotelefonia",
+      "manualPage": 27
+    },
+    {
+      "question": "Dopo aver superato le posizioni di attesa RHP si è considerati:",
+      "options": [
+        "Già in pista",
+        "Ancora fuori dalla pista",
+        "Nell’Apron"
+      ],
+      "correct": 0,
+      "category": "Radiotelefonia",
+      "manualPage": 27
+    }
+  ]
+}
