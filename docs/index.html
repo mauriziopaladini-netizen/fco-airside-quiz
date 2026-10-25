@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07111f"><meta name="description" content="FCO Airside Quiz: esercitazione di studio ADC A e ADC M.">
+  <title>FCO Airside Quiz — Web</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top"><div class="brand-mark">FCO</div><div><h1>Airside Quiz</h1><p>Allenamento ADC A · ADC M</p></div><span class="version">WEB BETA</span></header>
+  <main id="app">
+    <section class="panel" id="setup">
+      <p class="eyebrow">AREA DI STUDIO</p><h2>Preparati al quiz</h2><p class="muted">Scegli la banca e la modalità di esercitazione.</p>
+      <label for="bank">Banca domande</label><select id="bank"><option value="a">ADC A — Apron</option><option value="m">ADC M — Area di manovra</option></select>
+      <label for="mode">Modalità</label><select id="mode"><option value="training">Allenamento (feedback immediato)</option><option value="exam">Simulazione esame (20 domande · 25 minuti)</option><option value="random">Domande casuali (10 domande)</option><option value="category">Esercitazione per categoria</option></select>
+      <div id="categoryWrap" hidden><label for="category">Categoria</label><select id="category"></select></div>
+      <button id="start" class="primary">Inizia esercitazione</button><p id="loadStatus" class="small muted">Caricamento banche domande…</p>
+    </section>
+    <section class="panel quiz-panel" id="quiz" hidden>
+      <div class="quiz-meta"><span id="progress">Domanda 1</span><span id="timer" class="timer" hidden>25:00</span></div>
+      <div class="progress-track"><div id="progressBar"></div></div><p id="categoryLabel" class="eyebrow"></p><h2 id="questionText">Domanda</h2><div id="options" class="options"></div><div id="feedback" class="feedback" hidden></div>
+      <div class="actions"><button id="quit" class="secondary">Esci</button><button id="next" class="primary" disabled>Conferma risposta</button></div>
+    </section>
+    <section class="panel" id="results" hidden><p class="eyebrow">RISULTATO</p><h2 id="resultTitle">Esercitazione completata</h2><div class="score-ring"><strong id="score">0/0</strong><span>risposte corrette</span></div><p id="resultMessage" class="muted"></p><div id="review" class="review"></div><button id="again" class="primary">Torna alla schermata iniziale</button></section>
+    <section class="disclaimer"><strong>Nota importante</strong><p>Strumento di studio non ufficiale. Non è emesso, approvato o garantito da ADR o ENAC e non sostituisce manuali, procedure aeroportuali, formazione o prove ufficiali. Verifica sempre la documentazione ufficiale aggiornata.</p></section>
+  </main>
+  <footer>FCO Airside Quiz · versione Web sperimentale</footer><script src="app.js"></script>
+</body></html>
