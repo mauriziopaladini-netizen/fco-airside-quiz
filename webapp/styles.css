@@ -39,3 +39,8 @@ footer{text-align:center;color:#70869c;padding:20px;font-size:.78rem}
 [hidden]{display:none!important}
 @media(max-width:720px){.bank-grid{grid-template-columns:1fr}.category-list{grid-template-columns:1fr}.top{padding-top:17px}.bank-total{flex-wrap:wrap}.bank-total small{width:100%;margin-left:0}.bank-actions button{min-height:48px}}
 @media(max-width:420px){main{padding:0 13px 24px}.top{padding-left:15px;padding-right:15px}.version{font-size:.58rem}.hero,.bank-card,.panel{border-radius:17px}.section-heading{align-items:flex-start}.result-actions{flex-direction:column;align-items:stretch}.quiz-actions button{padding:12px}}
+
+
+.language-control{max-width:1120px;margin:0 auto 14px;padding:0 22px;display:flex;align-items:center;justify-content:flex-end;gap:12px;color:var(--muted);font-size:.82rem}
+.language-control select{background:#091827;border:1px solid #34516b;border-radius:10px;color:var(--text);padding:9px 12px;font:inherit}
+@media(max-width:520px){.language-control{padding:0 15px;justify-content:space-between}}
