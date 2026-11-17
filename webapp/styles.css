@@ -44,3 +44,5 @@ footer{text-align:center;color:#70869c;padding:20px;font-size:.78rem}
 .language-control{max-width:1120px;margin:0 auto 14px;padding:0 22px;display:flex;align-items:center;justify-content:flex-end;gap:12px;color:var(--muted);font-size:.82rem}
 .language-control select{background:#091827;border:1px solid #34516b;border-radius:10px;color:var(--text);padding:9px 12px;font:inherit}
 @media(max-width:520px){.language-control{padding:0 15px;justify-content:space-between}}
+
+.translation-tools{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:12px 0 18px}.translation-tools button{padding:9px 13px;font-size:.82rem}.translation-tools span{color:var(--muted);font-size:.78rem;line-height:1.4}
