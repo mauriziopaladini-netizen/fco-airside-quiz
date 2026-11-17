@@ -131,6 +131,7 @@ const t=(key,vars={})=>Object.entries(vars).reduce((s,[k,v])=>s.replaceAll("{"+k
 function applyUiLanguage(){
  const d=uiText[uiLanguage];document.documentElement.lang=uiLanguage;
  document.querySelector(".brand-copy p").textContent=d.tag;
+ if($("loadStatus"))$("loadStatus").textContent=(banks.a.length&&banks.m.length)?d.loadOk:d.loadFail;
  document.querySelector(".hero h2").textContent=d.hero;
  document.querySelector(".hero .muted").textContent=d.intro;
  document.querySelector(".bank-total span").textContent=d.total;
