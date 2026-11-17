@@ -100,14 +100,14 @@ function finish(expired){
   $("resultTitle").classList.toggle("passed",passed);$("resultTitle").classList.toggle("failed",exam&&!passed);
   const errors=state.questions.map((q,i)=>({q,a:state.answers[i],i})).filter(x=>!x.a||!x.a.correct);
   const byCat={};errors.forEach(x=>{const c=x.q.category||"Generale";byCat[c]=(byCat[c]||0)+1;});
-  $("categoryStats").innerHTML=errors.length?'<h3>'+t("reviewTopics")+'</h3>'+Object.entries(byCat).sort((a,b)=>b[1]-a[1]).map(([c,n])=>`<div class="stat-row"><span>${escapeHtml(c)}</span><strong>${n} errori</strong></div>`).join(""):`<p class='good-text'>${t("noErrors")}</p>`;
-  $("reviewErrors").innerHTML=errors.length?'<h3>'+t("reviewErrors")+'</h3>'+errors.map(({q,a,i})=>`<article class="error-item"><strong>${i+1}. ${escapeHtml(q.question)}</strong><p>La tua risposta: ${a?escapeHtml(q.options[a.selected]):"Nessuna risposta"}</p><p class="good-text">Risposta corretta: ${escapeHtml(q.options[q.correct])}</p><small>Categoria: ${escapeHtml(q.category||"Generale")} · Manuale, pagina ${escapeHtml(q.manualPage??"non indicata")}</small></article>`).join(""):"";
+  $("categoryStats").innerHTML=errors.length?'<h3>'+t("reviewTopics")+'</h3>'+Object.entries(byCat).sort((a,b)=>b[1]-a[1]).map(([c,n])=>`<div class="stat-row"><span>${escapeHtml(c)}</span><strong>${n} ${t("errors")}</strong></div>`).join(""):`<p class='good-text'>${t("noErrors")}</p>`;
+  $("reviewErrors").innerHTML=errors.length?'<h3>'+t("reviewErrors")+'</h3>'+errors.map(({q,a,i})=>`<article class="error-item"><strong>${i+1}. ${escapeHtml(q.question)}</strong><p>${t("yourAnswer")} ${a?escapeHtml(q.options[a.selected]):t("noAnswer")}</p><p class="good-text">${t("rightAnswer")} ${escapeHtml(q.options[q.correct])}</p><small>${t("category")} ${escapeHtml(q.category||"Generale")} · ${t("manual")} ${escapeHtml(q.manualPage??t("notSpecified"))}</small></article>`).join(""):"";
   showPanel("resultsPanel");window.scrollTo({top:0,behavior:"smooth"});
 }
 function openCategories(bank){
   state.bank=bank;$("categoryTitle").textContent=bankNames[bank]+" · "+t("chooseCategory");
   const counts={};banks[bank].forEach(q=>{const c=q.category||"Generale";counts[c]=(counts[c]||0)+1;});
-  $("categoryList").innerHTML=Object.entries(counts).sort((a,b)=>a[0].localeCompare(b[0],"it")).map(([c,n])=>`<button class="category-button" data-category="${escapeHtml(c)}"><span>${escapeHtml(c)}</span><strong>${n} domande →</strong></button>`).join("");
+  $("categoryList").innerHTML=Object.entries(counts).sort((a,b)=>a[0].localeCompare(b[0],"it")).map(([c,n])=>`<button class="category-button" data-category="${escapeHtml(c)}"><span>${escapeHtml(c)}</span><strong>${n} ${t("questions")} →</strong></button>`).join("");
   $("categoryList").querySelectorAll("[data-category]").forEach(b=>b.addEventListener("click",()=>begin(bank,"category",b.dataset.category)));
   showPanel("categoryPanel");window.scrollTo({top:0,behavior:"smooth"});
 }
