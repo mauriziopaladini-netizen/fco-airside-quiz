@@ -1,0 +1,43 @@
+name: Web App preview package
+
+on:
+  push:
+    branches:
+      - webapp-android-parity
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  package-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout preview branch
+        uses: actions/checkout@v4
+
+      - name: Prepare local preview instructions
+        run: |
+          cat > PREVIEW-ISTRUZIONI.txt <<'EOF'
+          FCO Airside Quiz - anteprima locale
+          
+          1. Estrai tutto il contenuto dello ZIP in una cartella.
+          2. Apri la cartella estratta.
+          3. Avvia un terminale in quella cartella.
+          4. Esegui: python -m http.server 8000
+          5. Apri il browser su: http://localhost:8000/docs/
+          
+          Per chiudere il server torna al terminale e premi CTRL+C.
+          
+          Nota: questa è un'anteprima locale della versione del ramo
+          webapp-android-parity. Non modifica il sito pubblico.
+          EOF
+          zip -r fco-airside-quiz-preview.zip docs shared PREVIEW-ISTRUZIONI.txt
+
+      - name: Upload preview ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: fco-airside-quiz-preview
+          path: fco-airside-quiz-preview.zip
+          if-no-files-found: error
+          retention-days: 14
