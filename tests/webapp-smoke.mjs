@@ -35,6 +35,24 @@ try {
       const score = await page.locator("#score").textContent();
       if (!score?.includes("/20")) throw new Error("Unexpected exam result: " + score);
       await page.locator("#home").click();
+
+      await page.locator('[data-action="all"][data-bank="' + bank + '"]').click();
+      if (!(await page.locator("#progress").textContent()).includes(bank === "a" ? "111" : "123")) throw new Error("Full review did not load for bank " + bank);
+      await page.locator("#options .option").first().click();
+      await page.locator("#next").click();
+      await page.locator("#feedback").waitFor({ state: "visible" });
+      await page.locator("#next").click();
+      if (!(await page.locator("#progress").textContent()).includes("2")) throw new Error("Full review did not advance for bank " + bank);
+      await page.locator("#home").click();
+
+      await page.locator('[data-action="random"][data-bank="' + bank + '"]').click();
+      if (!(await page.locator("#progress").textContent()).includes("/20")) throw new Error("Random practice did not load for bank " + bank);
+      await page.locator("#home").click();
+
+      await page.locator('[data-action="categories"][data-bank="' + bank + '"]').click();
+      await page.locator("#categoryList button").first().click();
+      if (!(await page.locator("#progress").textContent()).includes("1")) throw new Error("Category practice did not start for bank " + bank);
+      await page.locator("#home").click();
     }
     await page.locator("#languageSelect").selectOption("en");
     if (await page.locator("#loadStatus").textContent() !== "Question banks loaded: 111 ADC A and 123 ADC M.") {
@@ -43,7 +61,7 @@ try {
     if (errors.length) throw new Error("Browser errors: " + errors.join(" | "));
     await page.close();
   }
-  console.log("Browser smoke tests passed: desktop/mobile, ADC A/ADC M exams, results and language selector.");
+  console.log("Browser tests passed: desktop/mobile, ADC A/ADC M exams, full review, random practice, category practice, results and language selector.");
 } finally {
   if (browser) await browser.close();
   server.kill("SIGTERM");
