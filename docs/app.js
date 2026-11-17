@@ -33,7 +33,7 @@ function begin(bank, mode, category=null) {
   let pool = banks[bank];
   if(category) pool = pool.filter(q => (q.category || "Generale") === category);
   const count = mode === "exam" || mode === "random" ? 20 : pool.length;
-  state.questions = (mode === "all" ? [...pool] : shuffle(pool).slice(0, Math.min(count,pool.length)));
+  state.questions = shuffle(pool).slice(0, Math.min(count,pool.length));
   if(!state.questions.length) return;
   state.index=0;state.answers=[];state.selected=null;state.locked=false;state.remaining=1500;
   $("quizBank").textContent=bankNames[bank];$("quizMode").textContent=labels[mode] || "Allenamento";
