@@ -16,23 +16,44 @@ jobs:
       - name: Checkout preview branch
         uses: actions/checkout@v4
 
-      - name: Prepare local preview instructions
+      - name: Prepare one-click local preview
         run: |
           cat > PREVIEW-ISTRUZIONI.txt <<'EOF'
           FCO Airside Quiz - anteprima locale
-          
-          1. Estrai tutto il contenuto dello ZIP in una cartella.
-          2. Apri la cartella estratta.
-          3. Avvia un terminale in quella cartella.
-          4. Esegui: python -m http.server 8000
-          5. Apri il browser su: http://localhost:8000/docs/
-          
-          Per chiudere il server torna al terminale e premi CTRL+C.
-          
-          Nota: questa è un'anteprima locale della versione del ramo
-          webapp-android-parity. Non modifica il sito pubblico.
+
+          1. Estrai TUTTO lo ZIP in una cartella.
+          2. Entra nella cartella estratta.
+          3. Fai doppio clic su AVVIA-ANTEPRIMA.bat.
+          4. Si aprirà il browser su http://localhost:8000/docs/
+
+          Non chiudere la finestra nera mentre usi l'anteprima.
+          Per terminare, chiudi la finestra nera.
+
+          Se compare un messaggio che Python non è installato,
+          occorre installare Python per usare il server locale.
+
+          Questa anteprima non modifica il sito pubblico.
           EOF
-          zip -r fco-airside-quiz-preview.zip docs shared PREVIEW-ISTRUZIONI.txt
+          cat > AVVIA-ANTEPRIMA.bat <<'EOF'
+          @echo off
+          cd /d "%~dp0"
+          start "" http://localhost:8000/docs/
+          where py >nul 2>nul
+          if %errorlevel%==0 (
+            py -m http.server 8000
+            goto fine
+          )
+          where python >nul 2>nul
+          if %errorlevel%==0 (
+            python -m http.server 8000
+            goto fine
+          )
+          echo Python non risulta installato o non e' nel PATH.
+          echo Installa Python da https://www.python.org/downloads/
+          pause
+          :fine
+          EOF
+          zip -r fco-airside-quiz-preview.zip docs shared PREVIEW-ISTRUZIONI.txt AVVIA-ANTEPRIMA.bat
 
       - name: Upload preview ZIP
         uses: actions/upload-artifact@v4
