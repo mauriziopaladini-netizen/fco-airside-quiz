@@ -37,7 +37,7 @@ function begin(bank, mode, category=null) {
   if(!state.questions.length) return;
   state.index=0;state.answers=[];state.selected=null;state.locked=false;state.remaining=1500;
   $("quizBank").textContent=bankNames[bank];$("quizMode").textContent=t(({exam:"modeExam",all:"modeAll",random:"modeRandom",category:"modeCategory"})[mode]||"modeAll");
-  $("timer").hidden=mode!=="exam";showPanel("quiz");renderQuestion();
+  $("timer").hidden=mode!=="exam";showPanel("quizPanel");renderQuestion();
   if(mode==="exam") startTimer();
   window.scrollTo({top:0,behavior:"smooth"});
 }
