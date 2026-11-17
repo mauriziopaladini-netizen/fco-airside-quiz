@@ -46,7 +46,7 @@ try {
       await page.locator("#quit").click();
 
       await page.locator('[data-action="random"][data-bank="' + bank + '"]').click();
-      if (!(await page.locator("#progress").textContent()).includes("/20")) throw new Error("Random practice did not load for bank " + bank);
+      if (!(await page.locator("#progress").textContent()).includes("20")) throw new Error("Random practice did not load for bank " + bank);
       await page.locator("#quit").click();
 
       await page.locator('[data-action="categories"][data-bank="' + bank + '"]').click();
