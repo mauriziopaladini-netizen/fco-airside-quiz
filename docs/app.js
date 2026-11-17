@@ -120,4 +120,29 @@ $("quit").addEventListener("click",()=>{stopTimer();showPanel(null);window.scrol
 $("categoryBack").addEventListener("click",()=>{showPanel(null);});
 $("home").addEventListener("click",()=>{stopTimer();showPanel(null);});
 $("retry").addEventListener("click",()=>begin(state.bank,state.mode,state.category));
+
+const uiText={
+it:{tag:"Patente aeroportuale FCO / CIA",hero:"Allenati. Preparati. Verifica.",intro:"Due banche separate, modalità di ripasso e simulazione d'esame.",total:"domande totali",exam:"Esame completo",meta:"20 domande · 25 min",all:"Ripasso completo",random:"20 domande casuali",cats:"Allenamento per categoria",note:"Nota importante",disclaimer:"Strumento di studio non ufficiale. Non è emesso, approvato o garantito da ADR o ENAC e non sostituisce corsi, manuali, procedure aeroportuali, formazione o prove ufficiali. Verifica sempre la documentazione ufficiale vigente.",home:"Torna alla home"},
+en:{tag:"FCO / CIA Airport Driving Permit",hero:"Train. Prepare. Test yourself.",intro:"Two separate question banks, revision modes and exam simulation.",total:"questions in total",exam:"Full exam",meta:"20 questions · 25 min",all:"Review all questions",random:"20 random questions",cats:"Practice by category",note:"Important note",disclaimer:"Unofficial study aid. It is not issued, approved or guaranteed by ADR or ENAC and does not replace courses, manuals, airport procedures, training or official tests. Always check current official documentation.",home:"Back to home"},
+es:{tag:"Permiso de conducción aeroportuaria FCO / CIA",hero:"Entrena. Prepárate. Comprueba.",intro:"Dos bancos separados, modos de repaso y simulación de examen.",total:"preguntas en total",exam:"Examen completo",meta:"20 preguntas · 25 min",all:"Repasar todas las preguntas",random:"20 preguntas aleatorias",cats:"Práctica por categoría",note:"Nota importante",disclaimer:"Herramienta de estudio no oficial. No ha sido emitida, aprobada ni garantizada por ADR o ENAC y no sustituye cursos, manuales, procedimientos aeroportuarios, formación ni pruebas oficiales. Consulta la documentación oficial vigente.",home:"Volver al inicio"}
+};
+let uiLanguage="it";
+function applyUiLanguage(){
+ const d=uiText[uiLanguage];document.documentElement.lang=uiLanguage;
+ document.querySelector(".brand-copy p").textContent=d.tag;
+ document.querySelector(".hero h2").textContent=d.hero;
+ document.querySelector(".hero .muted").textContent=d.intro;
+ document.querySelector(".bank-total span").textContent=d.total;
+ document.querySelectorAll(".bank-card").forEach(card=>{
+  const bs=card.querySelectorAll("button");
+  bs[0].childNodes[0].textContent=d.exam+" ";bs[0].querySelector("small").textContent=d.meta;
+  bs[1].textContent=d.all;bs[2].textContent=d.random;bs[3].textContent=d.cats;
+ });
+ document.querySelector(".disclaimer strong").textContent=d.note;
+ document.querySelector(".disclaimer p").textContent=d.disclaimer;
+ $("home").textContent=d.home;
+}
+$("languageSelect").addEventListener("change",e=>{uiLanguage=e.target.value;applyUiLanguage();});
+applyUiLanguage();
+
 loadBanks();
