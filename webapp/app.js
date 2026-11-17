@@ -116,7 +116,8 @@ document.querySelectorAll("[data-action]").forEach(b=>b.addEventListener("click"
   else begin(b.dataset.bank,b.dataset.action);
 }));
 $("next").addEventListener("click",advance);
-$("quit").textContent=t("exit");\n$("quit").addEventListener("click",()=>{stopTimer();showPanel(null);window.scrollTo({top:0,behavior:"smooth"});});
+$("quit").textContent=t("exit");
+$("quit").addEventListener("click",()=>{stopTimer();showPanel(null);window.scrollTo({top:0,behavior:"smooth"});});
 $("categoryBack").addEventListener("click",()=>{showPanel(null);});
 $("home").addEventListener("click",()=>{stopTimer();showPanel(null);});
 $("retry").addEventListener("click",()=>begin(state.bank,state.mode,state.category));
