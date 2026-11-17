@@ -1,0 +1,64 @@
+name: Web App preview package
+
+on:
+  push:
+    branches:
+      - webapp-android-parity
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  package-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout preview branch
+        uses: actions/checkout@v4
+
+      - name: Prepare one-click local preview
+        run: |
+          cat > PREVIEW-ISTRUZIONI.txt <<'EOF'
+          FCO Airside Quiz - anteprima locale
+
+          1. Estrai TUTTO lo ZIP in una cartella.
+          2. Entra nella cartella estratta.
+          3. Fai doppio clic su AVVIA-ANTEPRIMA.bat.
+          4. Si aprirà il browser su http://localhost:8000/docs/
+
+          Non chiudere la finestra nera mentre usi l'anteprima.
+          Per terminare, chiudi la finestra nera.
+
+          Se compare un messaggio che Python non è installato,
+          occorre installare Python per usare il server locale.
+
+          Questa anteprima non modifica il sito pubblico.
+          EOF
+          cat > AVVIA-ANTEPRIMA.bat <<'EOF'
+          @echo off
+          cd /d "%~dp0"
+          start "" http://localhost:8000/docs/
+          where py >nul 2>nul
+          if %errorlevel%==0 (
+            py -m http.server 8000
+            goto fine
+          )
+          where python >nul 2>nul
+          if %errorlevel%==0 (
+            python -m http.server 8000
+            goto fine
+          )
+          echo Python non risulta installato o non e' nel PATH.
+          echo Installa Python da https://www.python.org/downloads/
+          pause
+          :fine
+          EOF
+          zip -r fco-airside-quiz-preview.zip docs shared PREVIEW-ISTRUZIONI.txt AVVIA-ANTEPRIMA.bat
+
+      - name: Upload preview ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: fco-airside-quiz-preview
+          path: fco-airside-quiz-preview.zip
+          if-no-files-found: error
+          retention-days: 14

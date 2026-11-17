@@ -1,0 +1,68 @@
+name: Web App checks
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "docs/**"
+      - "webapp/**"
+      - "shared/**"
+      - "tests/**"
+      - "package.json"
+      - ".github/workflows/webapp-check.yml"
+  push:
+    branches: [webapp-android-parity]
+    paths:
+      - "docs/**"
+      - "webapp/**"
+      - "shared/**"
+      - "tests/**"
+      - "package.json"
+      - ".github/workflows/webapp-check.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Check JavaScript syntax
+        run: |
+          node --check docs/app.js
+          node --check webapp/app.js
+          node --check tests/webapp-smoke.mjs
+      - name: Validate question banks
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const files = [
+            ['shared/adc_a_questions.json', 111],
+            ['shared/adc_m_questions.json', 123],
+            ['docs/shared/adc_a_questions.json', 111],
+            ['docs/shared/adc_m_questions.json', 123],
+          ];
+          for (const [file, expected] of files) {
+            const data = JSON.parse(fs.readFileSync(file, 'utf8'));
+            if (!Array.isArray(data.questions)) throw new Error(file + ': questions is not an array');
+            if (data.questions.length !== expected) {
+              throw new Error(file + ': expected ' + expected + ' questions, found ' + data.questions.length);
+            }
+            for (const [index, q] of data.questions.entries()) {
+              if (!q.question || !Array.isArray(q.options) || q.options.length !== 3 ||
+                  !Number.isInteger(q.correct) || q.correct < 0 || q.correct > 2) {
+                throw new Error(file + ': invalid question at index ' + index);
+              }
+            }
+            console.log(file + ': ' + data.questions.length + ' questions OK');
+          }
+          NODE
+      - name: Install browser test dependencies
+        run: |
+          npm install
+          npx playwright install --with-deps chromium
+      - name: Run desktop and mobile browser tests
+        run: npm run test:web
