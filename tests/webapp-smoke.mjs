@@ -21,6 +21,12 @@ try {
     const page = await browser.newPage({ viewport });
     const errors = [];
     page.on("pageerror", error => errors.push(error.message));
+    await page.addInitScript(() => {
+      window.Translator = {
+        availability: async () => "available",
+        create: async () => ({ translate: async value => "[translated] " + value })
+      };
+    });
     await page.goto("http://127.0.0.1:8765/docs/", { waitUntil: "networkidle" });
     await page.waitForFunction(() => document.querySelector("#loadStatus")?.textContent.includes("caricate correttamente"));
     for (const bank of ["a", "m"]) {
@@ -58,6 +64,16 @@ try {
     if (await page.locator("#loadStatus").textContent() !== "Question banks loaded: 111 ADC A and 123 ADC M.") {
       throw new Error("Language selector did not update bank status");
     }
+    await page.locator('[data-action="exam"][data-bank="a"]').click();
+    const originalQuestion = await page.locator("#questionText").textContent();
+    await page.locator("#translateToggle").click();
+    await page.waitForFunction(() => document.querySelector("#translationStatus")?.textContent.includes("Translation ready"));
+    const translatedQuestion = await page.locator("#questionText").textContent();
+    if (!translatedQuestion?.startsWith("[translated] ") || translatedQuestion === originalQuestion) {
+      throw new Error("Question translation did not update the displayed question");
+    }
+    const translatedOption = await page.locator("#options .option span:last-child").first().textContent();
+    if (!translatedOption?.startsWith("[translated] ")) throw new Error("Answer options were not translated");
     if (errors.length) throw new Error("Browser errors: " + errors.join(" | "));
     await page.close();
   }

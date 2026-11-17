@@ -1,6 +1,6 @@
 const $ = id => document.getElementById(id);
 const banks = { a: [], m: [] };
-const state = { bank: "a", mode: "practice", questions: [], index: 0, answers: [], selected: null, locked: false, timerId: null, remaining: 1500, category: null };
+const state = { bank: "a", mode: "practice", questions: [], index: 0, answers: [], selected: null, locked: false, timerId: null, remaining: 1500, category: null, translationEnabled: false, translated: null, translator: null, translatorLanguage: null };
 const letters = ["A","B","C","D","E","F"];
 const labels = { exam: "Simulazione d'esame", all: "Ripasso completo", random: "20 domande casuali", category: "Allenamento per categoria" };
 const bankNames = { a: "ADC A · Apron", m: "ADC M · Area di manovra" };
@@ -56,7 +56,71 @@ function renderQuestion(){
     b.innerHTML=`<span class="letter">${letters[i]||i+1}</span><span>${escapeHtml(opt)}</span>`;
     b.addEventListener("click",()=>choose(i));opts.appendChild(b);
   });
+  $("translateToggle").hidden = uiLanguage === "it";
+  $("translateToggle").textContent = state.translationEnabled ? t("translationOn") : t("translationOff");
+  $("translationStatus").textContent = "";
+  if (state.translationEnabled && uiLanguage !== "it") translateCurrentQuestion();
 }
+
+
+const translationCache = new Map();
+async function toggleQuestionTranslation() {
+  if (uiLanguage === "it") return;
+  if (!("Translator" in self)) {
+    $("translationStatus").textContent = t("translationUnsupported");
+    return;
+  }
+  state.translationEnabled = !state.translationEnabled;
+  state.translated = null;
+  $("translateToggle").textContent = state.translationEnabled ? t("translationOn") : t("translationOff");
+  if (state.translationEnabled) await translateCurrentQuestion();
+  else renderQuestion();
+}
+async function translateCurrentQuestion() {
+  const q = state.questions[state.index];
+  const target = uiLanguage;
+  const index = state.index;
+  if (!q || !state.translationEnabled || target === "it") return;
+  if (!("Translator" in self)) {
+    $("translationStatus").textContent = t("translationUnsupported");
+    return;
+  }
+  try {
+    if (!state.translator || state.translatorLanguage !== target) {
+      $("translationStatus").textContent = t("translationPreparing");
+      const availability = await Translator.availability({sourceLanguage:"it",targetLanguage:target});
+      if (availability === "unavailable") throw new Error("unavailable");
+      state.translator = await Translator.create({sourceLanguage:"it",targetLanguage:target});
+      state.translatorLanguage = target;
+    }
+    const translate = async value => {
+      const key = target + "\u0000" + value;
+      if (translationCache.has(key)) return translationCache.get(key);
+      const result = await state.translator.translate(value);
+      translationCache.set(key,result);
+      return result;
+    };
+    $("translationStatus").textContent = t("translationWorking");
+    const translatedQuestion = await translate(q.question);
+    const translatedOptions = [];
+    for (const option of q.options) translatedOptions.push(await translate(option));
+    const translatedCategory = await translate(q.category || "Generale");
+    if (index !== state.index || target !== uiLanguage || !state.translationEnabled) return;
+    state.translated = {question:translatedQuestion,options:translatedOptions,category:translatedCategory};
+    $("questionText").textContent = translatedQuestion;
+    $("categoryLabel").textContent = translatedCategory;
+    [...$("options").children].forEach((button,i) => {
+      const span = button.querySelector("span:last-child");
+      if (span) span.textContent = translatedOptions[i];
+    });
+    $("translationStatus").textContent = t("translationReady");
+  } catch (error) {
+    state.translationEnabled = false;
+    $("translateToggle").textContent = t("translationOff");
+    $("translationStatus").textContent = t("translationUnavailable");
+  }
+}
+
 function choose(i){
   if(state.locked)return;state.selected=i;
   [...$("options").children].forEach((b,j)=>b.classList.toggle("selected",j===i));
@@ -122,9 +186,9 @@ $("home").addEventListener("click",()=>{stopTimer();showPanel(null);});
 $("retry").addEventListener("click",()=>begin(state.bank,state.mode,state.category));
 
 const uiText={
-it:{tag:"Patente aeroportuale FCO / CIA",hero:"Allenati. Preparati. Verifica.",intro:"Due banche separate, modalità di ripasso e simulazione d'esame.",total:"domande totali",exam:"Esame completo",meta:"20 domande · 25 min",all:"Ripasso completo",random:"20 domande casuali",cats:"Allenamento per categoria",note:"Nota importante",disclaimer:"Strumento di studio non ufficiale. Non è emesso, approvato o garantito da ADR o ENAC e non sostituisce corsi, manuali, procedure aeroportuali, formazione o prove ufficiali. Verifica sempre la documentazione ufficiale vigente.",home:"Torna alla home",modeExam:"Simulazione d'esame",modeAll:"Ripasso completo",modeRandom:"20 domande casuali",modeCategory:"Allenamento per categoria",chooseCategory:"Scegli una categoria",back:"← Indietro",question:"Domanda {n} di {total}",confirm:"Conferma risposta",answer:"Rispondi",next:"Prossima domanda",showResult:"Vedi risultato",exit:"Esci",correct:"Risposta corretta.",wrong:"Risposta non corretta.",exact:"Risposta esatta:",reference:"Riferimento: manuale, pagina",notSpecified:"non indicata",passed:"Simulazione superata",failed:"Simulazione non superata",completed:"Allenamento completato",timeUp:"Tempo scaduto. La simulazione è terminata.",passRule:"Criterio di superamento: almeno 18 risposte corrette su 20.",youPassed:"Hai superato la simulazione.",notPassed:"Non hai raggiunto la soglia prevista.",answered:"Hai risposto correttamente a {correct} domande su {total}.",reviewTopics:"Argomenti da ripassare",errors:"errori",noErrors:"Nessun errore: ottimo lavoro!",reviewErrors:"Revisione errori",yourAnswer:"La tua risposta:",noAnswer:"Nessuna risposta",rightAnswer:"Risposta corretta:",category:"Categoria:",manual:"Manuale, pagina",questions:"domande",loadOk:"Banche caricate correttamente: 111 ADC A e 123 ADC M.",loadFail:"Non riesco a caricare le banche. Controlla che la Web App sia aperta da GitHub Pages o da un server web."},
-en:{tag:"FCO / CIA Airport Driving Permit",hero:"Train. Prepare. Test yourself.",intro:"Two separate question banks, revision modes and exam simulation.",total:"questions in total",exam:"Full exam",meta:"20 questions · 25 min",all:"Review all questions",random:"20 random questions",cats:"Practice by category",note:"Important note",disclaimer:"Unofficial study aid. It is not issued, approved or guaranteed by ADR or ENAC and does not replace courses, manuals, airport procedures, training or official tests. Always check current official documentation.",home:"Back to home",modeExam:"Exam simulation",modeAll:"Review all questions",modeRandom:"20 random questions",modeCategory:"Practice by category",chooseCategory:"Choose a category",back:"← Back",question:"Question {n} of {total}",confirm:"Confirm answer",answer:"Answer",next:"Next question",showResult:"View result",exit:"Exit",correct:"Correct answer.",wrong:"Incorrect answer.",exact:"Correct answer:",reference:"Reference: manual, page",notSpecified:"not specified",passed:"Simulation passed",failed:"Simulation not passed",completed:"Practice completed",timeUp:"Time is up. The simulation has ended.",passRule:"Passing score: at least 18 correct answers out of 20.",youPassed:"You passed the simulation.",notPassed:"You did not reach the required score.",answered:"You answered {correct} out of {total} questions correctly.",reviewTopics:"Topics to review",errors:"errors",noErrors:"No mistakes: excellent work!",reviewErrors:"Review mistakes",yourAnswer:"Your answer:",noAnswer:"Not answered",rightAnswer:"Correct answer:",category:"Category:",manual:"Manual, page",questions:"questions",loadOk:"Question banks loaded: 111 ADC A and 123 ADC M.",loadFail:"Unable to load the question banks. Open the Web App from GitHub Pages or a web server."},
-es:{tag:"Permiso de conducción aeroportuaria FCO / CIA",hero:"Entrena. Prepárate. Comprueba.",intro:"Dos bancos separados, modos de repaso y simulación de examen.",total:"preguntas en total",exam:"Examen completo",meta:"20 preguntas · 25 min",all:"Repasar todas las preguntas",random:"20 preguntas aleatorias",cats:"Práctica por categoría",note:"Nota importante",disclaimer:"Herramienta de estudio no oficial. No ha sido emitida, aprobada ni garantizada por ADR o ENAC y no sustituye cursos, manuales, procedimientos aeroportuarios, formación ni pruebas oficiales. Consulta la documentación oficial vigente.",home:"Volver al inicio",modeExam:"Simulación de examen",modeAll:"Repaso completo",modeRandom:"20 preguntas aleatorias",modeCategory:"Práctica por categoría",chooseCategory:"Elige una categoría",back:"← Atrás",question:"Pregunta {n} de {total}",confirm:"Confirmar respuesta",answer:"Responder",next:"Pregunta siguiente",showResult:"Ver resultado",exit:"Salir",correct:"Respuesta correcta.",wrong:"Respuesta incorrecta.",exact:"Respuesta correcta:",reference:"Referencia: manual, página",notSpecified:"no indicada",passed:"Simulación superada",failed:"Simulación no superada",completed:"Práctica completada",timeUp:"Se acabó el tiempo. La simulación ha terminado.",passRule:"Criterio para aprobar: al menos 18 respuestas correctas de 20.",youPassed:"Has superado la simulación.",notPassed:"No has alcanzado la puntuación requerida.",answered:"Has respondido correctamente {correct} de {total} preguntas.",reviewTopics:"Temas para repasar",errors:"errores",noErrors:"Sin errores: ¡excelente trabajo!",reviewErrors:"Revisión de errores",yourAnswer:"Tu respuesta:",noAnswer:"Sin respuesta",rightAnswer:"Respuesta correcta:",category:"Categoría:",manual:"Manual, página",questions:"preguntas",loadOk:"Bancos cargados: 111 ADC A y 123 ADC M.",loadFail:"No se pueden cargar los bancos. Abre la aplicación desde GitHub Pages o un servidor web."}
+it:{tag:"Patente aeroportuale FCO / CIA",hero:"Allenati. Preparati. Verifica.",intro:"Due banche separate, modalità di ripasso e simulazione d'esame.",total:"domande totali",exam:"Esame completo",meta:"20 domande · 25 min",all:"Ripasso completo",random:"20 domande casuali",cats:"Allenamento per categoria",note:"Nota importante",disclaimer:"Strumento di studio non ufficiale. Non è emesso, approvato o garantito da ADR o ENAC e non sostituisce corsi, manuali, procedure aeroportuali, formazione o prove ufficiali. Verifica sempre la documentazione ufficiale vigente.",home:"Torna alla home",modeExam:"Simulazione d'esame",modeAll:"Ripasso completo",modeRandom:"20 domande casuali",modeCategory:"Allenamento per categoria",chooseCategory:"Scegli una categoria",back:"← Indietro",question:"Domanda {n} di {total}",confirm:"Conferma risposta",answer:"Rispondi",next:"Prossima domanda",showResult:"Vedi risultato",exit:"Esci",correct:"Risposta corretta.",wrong:"Risposta non corretta.",exact:"Risposta esatta:",reference:"Riferimento: manuale, pagina",notSpecified:"non indicata",passed:"Simulazione superata",failed:"Simulazione non superata",completed:"Allenamento completato",timeUp:"Tempo scaduto. La simulazione è terminata.",passRule:"Criterio di superamento: almeno 18 risposte corrette su 20.",youPassed:"Hai superato la simulazione.",notPassed:"Non hai raggiunto la soglia prevista.",answered:"Hai risposto correttamente a {correct} domande su {total}.",reviewTopics:"Argomenti da ripassare",errors:"errori",noErrors:"Nessun errore: ottimo lavoro!",reviewErrors:"Revisione errori",yourAnswer:"La tua risposta:",noAnswer:"Nessuna risposta",rightAnswer:"Risposta corretta:",category:"Categoria:",manual:"Manuale, pagina",questions:"domande",loadOk:"Banche caricate correttamente: 111 ADC A e 123 ADC M.",loadFail:"Non riesco a caricare le banche. Controlla che la Web App sia aperta da GitHub Pages o da un server web.",translationOn:"Traduzione attiva",translationOff:"Traduci domanda",translationPreparing:"Preparazione del modello di traduzione…",translationWorking:"Traduzione della domanda e delle risposte…",translationReady:"Traduzione pronta · risposta corretta invariata",translationUnsupported:"Traduzione locale non supportata da questo browser/dispositivo.",translationUnavailable:"Modello non disponibile. La domanda resta in italiano."},
+en:{tag:"FCO / CIA Airport Driving Permit",hero:"Train. Prepare. Test yourself.",intro:"Two separate question banks, revision modes and exam simulation.",total:"questions in total",exam:"Full exam",meta:"20 questions · 25 min",all:"Review all questions",random:"20 random questions",cats:"Practice by category",note:"Important note",disclaimer:"Unofficial study aid. It is not issued, approved or guaranteed by ADR or ENAC and does not replace courses, manuals, airport procedures, training or official tests. Always check current official documentation.",home:"Back to home",modeExam:"Exam simulation",modeAll:"Review all questions",modeRandom:"20 random questions",modeCategory:"Practice by category",chooseCategory:"Choose a category",back:"← Back",question:"Question {n} of {total}",confirm:"Confirm answer",answer:"Answer",next:"Next question",showResult:"View result",exit:"Exit",correct:"Correct answer.",wrong:"Incorrect answer.",exact:"Correct answer:",reference:"Reference: manual, page",notSpecified:"not specified",passed:"Simulation passed",failed:"Simulation not passed",completed:"Practice completed",timeUp:"Time is up. The simulation has ended.",passRule:"Passing score: at least 18 correct answers out of 20.",youPassed:"You passed the simulation.",notPassed:"You did not reach the required score.",answered:"You answered {correct} out of {total} questions correctly.",reviewTopics:"Topics to review",errors:"errors",noErrors:"No mistakes: excellent work!",reviewErrors:"Review mistakes",yourAnswer:"Your answer:",noAnswer:"Not answered",rightAnswer:"Correct answer:",category:"Category:",manual:"Manual, page",questions:"questions",loadOk:"Question banks loaded: 111 ADC A and 123 ADC M.",loadFail:"Unable to load the question banks. Open the Web App from GitHub Pages or a web server.",translationOn:"Translation on",translationOff:"Translate question",translationPreparing:"Preparing translation model…",translationWorking:"Translating question and answers…",translationReady:"Translation ready · correct answer preserved",translationUnsupported:"Local translation is not supported by this browser/device.",translationUnavailable:"Translation model unavailable. The question remains in Italian."},
+es:{tag:"Permiso de conducción aeroportuaria FCO / CIA",hero:"Entrena. Prepárate. Comprueba.",intro:"Dos bancos separados, modos de repaso y simulación de examen.",total:"preguntas en total",exam:"Examen completo",meta:"20 preguntas · 25 min",all:"Repasar todas las preguntas",random:"20 preguntas aleatorias",cats:"Práctica por categoría",note:"Nota importante",disclaimer:"Herramienta de estudio no oficial. No ha sido emitida, aprobada ni garantizada por ADR o ENAC y no sustituye cursos, manuales, procedimientos aeroportuarios, formación ni pruebas oficiales. Consulta la documentación oficial vigente.",home:"Volver al inicio",modeExam:"Simulación de examen",modeAll:"Repaso completo",modeRandom:"20 preguntas aleatorias",modeCategory:"Práctica por categoría",chooseCategory:"Elige una categoría",back:"← Atrás",question:"Pregunta {n} de {total}",confirm:"Confirmar respuesta",answer:"Responder",next:"Pregunta siguiente",showResult:"Ver resultado",exit:"Salir",correct:"Respuesta correcta.",wrong:"Respuesta incorrecta.",exact:"Respuesta correcta:",reference:"Referencia: manual, página",notSpecified:"no indicada",passed:"Simulación superada",failed:"Simulación no superada",completed:"Práctica completada",timeUp:"Se acabó el tiempo. La simulación ha terminado.",passRule:"Criterio para aprobar: al menos 18 respuestas correctas de 20.",youPassed:"Has superado la simulación.",notPassed:"No has alcanzado la puntuación requerida.",answered:"Has respondido correctamente {correct} de {total} preguntas.",reviewTopics:"Temas para repasar",errors:"errores",noErrors:"Sin errores: ¡excelente trabajo!",reviewErrors:"Revisión de errores",yourAnswer:"Tu respuesta:",noAnswer:"Sin respuesta",rightAnswer:"Respuesta correcta:",category:"Categoría:",manual:"Manual, página",questions:"preguntas",loadOk:"Bancos cargados: 111 ADC A y 123 ADC M.",loadFail:"No se pueden cargar los bancos. Abre la aplicación desde GitHub Pages o un servidor web.",translationOn:"Traducción activada",translationOff:"Traducir pregunta",translationPreparing:"Preparando el modelo de traducción…",translationWorking:"Traduciendo pregunta y respuestas…",translationReady:"Traducción lista · respuesta correcta conservada",translationUnsupported:"Este navegador/dispositivo no admite traducción local.",translationUnavailable:"Modelo no disponible. La pregunta permanece en italiano."}
 };
 let uiLanguage="it";
 const t=(key,vars={})=>Object.entries(vars).reduce((s,[k,v])=>s.replaceAll("{"+k+"}",v),uiText[uiLanguage][key]||uiText.it[key]||key);
@@ -150,7 +214,8 @@ function applyUiLanguage(){
  }
  if(!$("categoryPanel").hidden)$("categoryTitle").textContent=bankNames[state.bank]+" · "+t("chooseCategory");
 }
-$("languageSelect").addEventListener("change",e=>{uiLanguage=e.target.value;applyUiLanguage();});
+$("languageSelect").addEventListener("change",e=>{uiLanguage=e.target.value;state.translationEnabled=false;state.translated=null;state.translator=null;state.translatorLanguage=null;applyUiLanguage();if(state.questions.length&&!$("quizPanel").hidden)renderQuestion();});
+$("translateToggle").addEventListener("click",toggleQuestionTranslation);
 
 applyUiLanguage();
 
