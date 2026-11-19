@@ -23,6 +23,15 @@ function shuffle(list) {
   for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}
   return a;
 }
+function shuffleQuestionOptions(question) {
+  const indexed = question.options.map((text, index) => ({text, index}));
+  const shuffled = shuffle(indexed);
+  return {
+    ...question,
+    options: shuffled.map(option => option.text),
+    correct: shuffled.findIndex(option => option.index === question.correct)
+  };
+}
 function escapeHtml(value) {
   return String(value ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 }
@@ -33,7 +42,7 @@ function begin(bank, mode, category=null) {
   let pool = banks[bank];
   if(category) pool = pool.filter(q => (q.category || "Generale") === category);
   const count = mode === "exam" || mode === "random" ? 20 : pool.length;
-  state.questions = shuffle(pool).slice(0, Math.min(count,pool.length));
+  state.questions = shuffle(pool).slice(0, Math.min(count,pool.length)).map(shuffleQuestionOptions);
   if(!state.questions.length) return;
   state.index=0;state.answers=[];state.selected=null;state.locked=false;state.remaining=1500;
   $("quizBank").textContent=bankNames[bank];$("quizMode").textContent=t(({exam:"modeExam",all:"modeAll",random:"modeRandom",category:"modeCategory"})[mode]||"modeAll");

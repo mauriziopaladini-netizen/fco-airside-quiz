@@ -267,8 +267,22 @@ public class MainActivity extends Activity {
         content.addView(button(L("back"), v -> home()));
     }
 
+    private QuizQuestion randomizedQuestion(QuizQuestion original) {
+        List<Integer> order = new ArrayList<>();
+        for (int i = 0; i < original.options.size(); i++) order.add(i);
+        Collections.shuffle(order);
+        List<String> shuffledOptions = new ArrayList<>();
+        int shuffledCorrect = -1;
+        for (int i = 0; i < order.size(); i++) {
+            int originalIndex = order.get(i);
+            shuffledOptions.add(original.options.get(originalIndex));
+            if (originalIndex == original.correct) shuffledCorrect = i;
+        }
+        return new QuizQuestion(original.question, shuffledOptions, shuffledCorrect, original.category, original.page);
+    }
+
     private void startExam(List<QuizQuestion> bank) {
-        activeBank = bank; quiz.clear(); quiz.addAll(bank); Collections.shuffle(quiz); if (quiz.size() > 20) quiz.subList(20, quiz.size()).clear();
+        activeBank = bank; quiz.clear(); for (QuizQuestion q : bank) quiz.add(randomizedQuestion(q)); Collections.shuffle(quiz); if (quiz.size() > 20) quiz.subList(20, quiz.size()).clear();
         index = 0; score = 0; wrongAnswers.clear(); answerLocked = false; examMode = true; lastExam = true; lastTimeExpired = false; remainingSeconds = 25 * 60L;
         renderQuestion(); startTimer();
     }
@@ -298,12 +312,12 @@ public class MainActivity extends Activity {
     }
 
     private void startCategory(List<QuizQuestion> bank, String category) {
-        activeBank = bank; quiz.clear(); for (QuizQuestion q : bank) if (q.category.equals(category)) quiz.add(q); Collections.shuffle(quiz);
+        activeBank = bank; quiz.clear(); for (QuizQuestion q : bank) if (q.category.equals(category)) quiz.add(randomizedQuestion(q)); Collections.shuffle(quiz);
         index = 0; score = 0; wrongAnswers.clear(); answerLocked = false; examMode = false; lastExam = false; renderQuestion();
     }
 
     private void startPractice(List<QuizQuestion> bank, int count) {
-        activeBank = bank; quiz.clear(); quiz.addAll(bank); Collections.shuffle(quiz); if (count < quiz.size()) quiz.subList(count, quiz.size()).clear();
+        activeBank = bank; quiz.clear(); for (QuizQuestion q : bank) quiz.add(randomizedQuestion(q)); Collections.shuffle(quiz); if (count < quiz.size()) quiz.subList(count, quiz.size()).clear();
         index = 0; score = 0; wrongAnswers.clear(); answerLocked = false; examMode = false; lastExam = false; renderQuestion();
     }
 
