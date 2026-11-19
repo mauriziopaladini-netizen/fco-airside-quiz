@@ -11,7 +11,24 @@
     <div class="brand-copy"><h1>FCO AIRSIDE</h1><p>Patente aeroportuale FCO / CIA</p></div>
     <span class="version">STUDIO</span>
   </header>
-  <main id="app">
+  <section id="introScreen" class="intro-screen" aria-label="Introduzione FCO Airside Quiz">
+    <div class="intro-glow intro-glow-one"></div><div class="intro-glow intro-glow-two"></div>
+    <div class="intro-topline"><span class="intro-mark">✈</span><span>FCO <b>AIRSIDE QUIZ</b> <em>3.0</em></span><span class="intro-status">TRAINING SYSTEM ONLINE</span></div>
+    <div class="intro-layout"><div class="intro-copy">
+      <p class="intro-kicker">FORMAZIONE · ALLENAMENTO · SIMULAZIONE</p>
+      <h1>CONOSCI<br><span>L’AIRSIDE.</span><br>PREPARATI A<br><strong>OGNI SFIDA.</strong></h1>
+      <p class="intro-description">La tua area di allenamento per le abilitazioni aeroportuali FCO / CIA.</p>
+      <div class="intro-features"><span>✦ QUIZ ADC A / ADC M</span><span>◉ SIMULAZIONI D’ESAME</span><span>▥ PROGRESSI E RIPASSO</span></div>
+      <button id="enterTraining" class="intro-enter" type="button">ENTRA NELL’AREA DI FORMAZIONE <span>↗</span></button>
+    </div><div class="intro-scene" aria-hidden="true">
+      <div class="da-vinci-card"><div class="da-vinci-orbit"></div><span class="da-vinci-sigil">DV</span><small>LEONARDO<br>DA VINCI</small><i>1452 — 1519</i></div>
+      <div class="intro-plane">✈</div><div class="intro-tower"><div class="tower-cap"></div><div class="tower-neck"></div><div class="tower-base"></div></div>
+      <div class="intro-terminal"><span>LEONARDO DA VINCI · FIUMICINO</span><div class="terminal-windows"></div></div>
+      <div class="intro-runway"></div><div class="safety-car"><span class="car-light"></span><b>FCO</b><small>SAFETY</small></div>
+    </div></div>
+    <div class="intro-bottom"><span>FIUMICINO INTERNATIONAL AIRPORT</span><span>ADC A <i>•</i> ADC M</span><span>BUILT FOR AIRSIDE KNOWLEDGE</span></div>
+  </section>
+  <main id="app" class="app-content" hidden>
         <label class="language-control" for="languageSelect"><span>🌐 Lingua / Language / Idioma</span><select id="languageSelect" aria-label="Language"><option value="it">🇮🇹 Italiano</option><option value="en">🇬🇧 English</option><option value="es">🇪🇸 Español</option></select></label>
     <section class="hero">
       <p class="eyebrow">AREA DI FORMAZIONE</p>
@@ -67,4 +84,5 @@
   </main>
   <footer>FCO Airside Quiz · Web App</footer>
   <script src="app.js"></script>
+  <script>document.getElementById("enterTraining")?.addEventListener("click",()=>{document.getElementById("introScreen").hidden=true;document.getElementById("app").hidden=false;window.scrollTo({top:0,behavior:"smooth"});});</script>
 </body></html>
