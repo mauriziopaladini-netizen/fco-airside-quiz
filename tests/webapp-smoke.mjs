@@ -28,6 +28,7 @@ try {
       };
     });
     await page.goto("http://127.0.0.1:8765/docs/", { waitUntil: "networkidle" });
+    await page.locator("#enterTraining").click();
     await page.waitForFunction(() => document.querySelector("#loadStatus")?.textContent.includes("caricate correttamente"));
     for (const bank of ["a", "m"]) {
       const exam = page.locator('[data-action="exam"][data-bank="' + bank + '"]');
