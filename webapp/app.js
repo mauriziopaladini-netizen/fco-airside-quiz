@@ -23,14 +23,26 @@ function shuffle(list) {
   for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}
   return a;
 }
-function shuffleQuestionOptions(question) {
-  const indexed = question.options.map((text, index) => ({text, index}));
-  const shuffled = shuffle(indexed);
-  return {
-    ...question,
-    options: shuffled.map(option => option.text),
-    correct: shuffled.findIndex(option => option.index === question.correct)
-  };
+function randomizeQuiz(pool, count) {
+  const selected = shuffle([...pool]).slice(0, count);
+  const groups = new Map();
+  selected.forEach((question, index) => {
+    const size = question.options.length;
+    if (!groups.has(size)) groups.set(size, []);
+    groups.get(size).push(index);
+  });
+  const targetPositions = new Array(selected.length);
+  for (const [size, indexes] of groups) {
+    const positions = shuffle(indexes.map((_, i) => i % size));
+    indexes.forEach((questionIndex, i) => { targetPositions[questionIndex] = positions[i]; });
+  }
+  return selected.map((question, index) => {
+    const correctOption = question.options[question.correct];
+    const distractors = shuffle(question.options.filter((_, i) => i !== question.correct));
+    const options = [...distractors];
+    options.splice(targetPositions[index], 0, correctOption);
+    return { ...question, options, correct: targetPositions[index] };
+  });
 }
 function escapeHtml(value) {
   return String(value ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -42,7 +54,7 @@ function begin(bank, mode, category=null) {
   let pool = banks[bank];
   if(category) pool = pool.filter(q => (q.category || "Generale") === category);
   const count = mode === "exam" || mode === "random" ? 20 : pool.length;
-  state.questions = shuffle(pool).slice(0, Math.min(count,pool.length)).map(shuffleQuestionOptions);
+  state.questions = randomizeQuiz(pool, Math.min(count,pool.length));
   if(!state.questions.length) return;
   state.index=0;state.answers=[];state.selected=null;state.locked=false;state.remaining=1500;
   $("quizBank").textContent=bankNames[bank];$("quizMode").textContent=t(({exam:"modeExam",all:"modeAll",random:"modeRandom",category:"modeCategory"})[mode]||"modeAll");
