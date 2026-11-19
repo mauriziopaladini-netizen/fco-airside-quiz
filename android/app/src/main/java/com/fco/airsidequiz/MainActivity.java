@@ -11,6 +11,8 @@ import android.os.CountDownTimer;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.ScrollView;
@@ -191,46 +193,30 @@ public class MainActivity extends Activity {
     }
 
     private void intro() {
-        LinearLayout root = new LinearLayout(this);
-        root.setOrientation(LinearLayout.VERTICAL);
-        root.setPadding(dp(20), dp(28), dp(20), dp(20));
-        root.setBackground(new GradientDrawable(GradientDrawable.Orientation.TL_BR,
-                new int[]{Color.rgb(3, 12, 28), Color.rgb(7, 35, 61), Color.rgb(4, 15, 30)}));
-        LinearLayout brand = new LinearLayout(this);
-        brand.setGravity(Gravity.CENTER_VERTICAL);
-        TextView mark = text("✈", 27, Color.rgb(3, 22, 38), true);
-        mark.setGravity(Gravity.CENTER);
-        mark.setBackground(panelBackground(Color.rgb(47, 215, 255), Color.rgb(10, 123, 183), Color.rgb(80, 225, 255)));
-        brand.addView(mark, new LinearLayout.LayoutParams(dp(48), dp(48)));
-        TextView title = text("FCO AIRSIDE QUIZ 3.0", 19, WHITE, true);
-        title.setPadding(dp(12), 0, 0, 0); brand.addView(title); root.addView(brand);
-        ScrollView scroll = new ScrollView(this);
-        LinearLayout body = new LinearLayout(this); body.setOrientation(LinearLayout.VERTICAL);
-        body.setPadding(0, dp(22), 0, dp(12));
-        body.addView(text("FORMAZIONE  •  ALLENAMENTO  •  SIMULAZIONE", 10, BLUE, true));
-        TextView headline = text("CONOSCI\nL’AIRSIDE.\nPREPARATI A\nOGNI SFIDA.", 34, WHITE, true);
-        headline.setLineSpacing(dp(2), 1f); headline.setPadding(dp(2), dp(16), dp(2), dp(10)); body.addView(headline);
-        LinearLayout scene = new LinearLayout(this); scene.setOrientation(LinearLayout.VERTICAL);
-        scene.setGravity(Gravity.CENTER); scene.setPadding(dp(14), dp(16), dp(14), dp(16));
-        scene.setBackground(panelBackground(Color.rgb(20, 76, 111), Color.rgb(4, 22, 42), Color.rgb(42, 181, 226)));
-        TextView daVinci = text("LEONARDO DA VINCI", 13, Color.rgb(190, 235, 255), true);
-        daVinci.setGravity(Gravity.CENTER); scene.addView(daVinci);
-        TextView initials = text("DV", 52, Color.rgb(100, 211, 255), true);
-        initials.setGravity(Gravity.CENTER); scene.addView(initials);
-        TextView airport = text("✈     TORRE DI CONTROLLO     ✈\nLEONARDO DA VINCI · FIUMICINO\n\n🚘  FCO SAFETY", 16, WHITE, true);
-        airport.setGravity(Gravity.CENTER); airport.setLineSpacing(dp(7), 1f); scene.addView(airport);
-        LinearLayout.LayoutParams sceneParams = new LinearLayout.LayoutParams(-1, dp(250));
-        sceneParams.setMargins(0, dp(10), 0, dp(20)); body.addView(scene, sceneParams);
-        TextView features = text("✦  QUIZ ADC A / ADC M     ◉  SIMULAZIONI D’ESAME\n▥  RIPASSO E ALLENAMENTO", 12, Color.rgb(187, 226, 246), true);
-        features.setLineSpacing(dp(7), 1f); body.addView(features);
-        Button enter = button("ENTRA NELL’AREA DI FORMAZIONE  ↗", v -> home());
-        enter.setTextColor(Color.rgb(2, 28, 47));
-        enter.setBackground(panelBackground(Color.rgb(50, 222, 255), Color.rgb(12, 158, 215), Color.rgb(100, 235, 255)));
-        LinearLayout.LayoutParams enterParams = new LinearLayout.LayoutParams(-1, dp(62));
-        enterParams.setMargins(0, dp(24), 0, dp(8)); body.addView(enter, enterParams);
-        scroll.addView(body); root.addView(scroll, new LinearLayout.LayoutParams(-1, 0, 1f));
-        TextView footer = text("FIUMICINO INTERNATIONAL AIRPORT   •   ADC A  •   ADC M", 9, MUTED, true);
-        footer.setGravity(Gravity.CENTER); root.addView(footer); setContentView(root);
+        FrameLayout root = new FrameLayout(this);
+        root.setBackgroundColor(Color.rgb(6, 17, 31));
+
+        int screenWidth = getResources().getDisplayMetrics().widthPixels;
+        int artworkHeight = Math.round(screenWidth * 9f / 16f);
+
+        ImageView artwork = new ImageView(this);
+        artwork.setImageResource(R.drawable.fco_airside_intro);
+        artwork.setScaleType(ImageView.ScaleType.FIT_CENTER);
+        FrameLayout.LayoutParams imageParams = new FrameLayout.LayoutParams(
+                FrameLayout.LayoutParams.MATCH_PARENT, artworkHeight, Gravity.CENTER);
+        root.addView(artwork, imageParams);
+
+        // Transparent touch target aligned with the CTA already printed in the approved artwork.
+        View enter = new View(this);
+        enter.setContentDescription("Entra nell'area di formazione");
+        enter.setBackgroundColor(Color.TRANSPARENT);
+        enter.setOnClickListener(v -> home());
+        FrameLayout.LayoutParams enterParams = new FrameLayout.LayoutParams(
+                Math.round(screenWidth * 0.55f), Math.round(artworkHeight * 0.12f), Gravity.CENTER);
+        enter.setTranslationY(artworkHeight * 0.395f);
+        root.addView(enter, enterParams);
+
+        setContentView(root);
     }
 
     private void home() {
