@@ -32,15 +32,15 @@ jobs:
           curl -fsSL https://services.gradle.org/distributions/gradle-8.9-bin.zip -o /tmp/gradle.zip
           unzip -q /tmp/gradle.zip -d /tmp
 
-      - name: Build release APK
+      - name: Build signed installable debug APK
         working-directory: android
-        run: /tmp/gradle-8.9/bin/gradle --no-daemon clean assembleRelease
+        run: /tmp/gradle-8.9/bin/gradle --no-daemon clean assembleDebug
 
-      - name: Upload APK as workflow artifact
+      - name: Upload installable APK
         uses: actions/upload-artifact@v4
         with:
           name: FCO-Airside-Quiz-Android-APK
-          path: android/app/build/outputs/apk/release/*.apk
+          path: android/app/build/outputs/apk/debug/*.apk
           if-no-files-found: error
           retention-days: 30
 
@@ -50,4 +50,4 @@ jobs:
         with:
           name: FCO Airside Quiz ${{ github.ref_name }}
           generate_release_notes: true
-          files: android/app/build/outputs/apk/release/*.apk
+          files: android/app/build/outputs/apk/debug/*.apk
